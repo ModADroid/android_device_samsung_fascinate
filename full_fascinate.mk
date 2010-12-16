@@ -35,22 +35,48 @@ $(call inherit-product-if-exists, vendor/samsung/SCH-I500/SCH-I500-vendor.mk)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240 \
     rild.libpath=/system/lib/libsec-ril40.so \
-    rild.libargs=-d /dev/ttyS0 \
+    rild.libargs=-d[SPACE]/dev/ttyS0 \
     wifi.interface=eth0 \
-    wifi.supplicant_scan_interval=15
+    wifi.supplicant_scan_interval=15 \
+    ro.wifi.channels=11
 
 #verizon cdma stuff
 PRODUCT_PROPERTY_OVERRIDES += \
-	  ro.com.google.clientidbase=android-verizon \
-	  ro.cdma.home.operator.numeric=310004 \
-	  ro.cdma.home.operator.alpha=Verizon 
-
+	ro.com.google.clientidbase=android-verizon \
+	ro.com.google.clientidbase.yt=android-verizon \
+	ro.com.google.clientidbase.am=android-verizon \
+	ro.com.google.clientidbase.vs=android-verizon \
+	ro.com.google.clientidbase.gmm=android-verizon \
+	ro.cdma.home.operator.numeric=310004 \
+	ro.cdma.home.operator.alpha=Verizon \
+  	net.cdma.pppd.authtype=require-chap \
+	net.cdma.pppd.user=user[SPACE]VerizonWireless \
+	net.cdma.datalinkinterface=/dev/ttyCDMA0 \
+	net.interfaces.defaultroute=cdma \
+	net.cdma.ppp.interface=ppp0 \
+	net.connectivity.type=CDMA1 \
+	gsm.operator.alpha=VzW \
+	gsm.operator.numeric=310012 \
+	gsm.operator.iso-country=us \
+	gsm.operator.isroaming=false \
+	gsm.current.phone-type=2 \
+	ro.csc.sales_code=VZW \
+	ril.sales_code=VZW \
+	ro.carrier=Verizon \
+	net.dns1=8.8.8.8 \
+	net.dns2=8.8.4.4 \
+	mobiledata.interfaces=eth0,ppp0 \
+	phone.ril.classname=com.android.internal.telephony.SamsungRIL
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.startheapsize=8m \
     dalvik.vm.heapsize=48m
+
+# For mobiledatainterfaces
+PRODUCT_PROPERTY_OVERRIDES += \
+    mobiledata.interfaces=eth0,ppp0
 
 # Fascinate uses high-density artwork where available
 PRODUCT_LOCALES := hdpi
