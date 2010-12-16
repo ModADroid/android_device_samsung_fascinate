@@ -23,9 +23,11 @@ DIRS="
 app
 bin
 bin/gpsd
+cameradata
 etc/dhcpcd/dhcpcd-hooks
 etc/ppp
 etc/wifi
+firmware
 lib/egl
 lib/hw
 lib/SCH-I500
@@ -60,6 +62,9 @@ bin/npsmobex
 bin/btld
 bin/dbus-daemon
 bin/BCM4329B1_002.002.023.0417.0464.hcd
+
+cameradata/datapattern_420sp.yuv
+cameradata/datapattern_front_420sp.yuv
 
 etc/asound.conf
 etc/ppp/chap-secrets
@@ -198,12 +203,9 @@ done
 PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsecril-client.so:obj/lib/libsecril-client.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libgps.so:obj/lib/libgps.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libsecgps.so:obj/lib/libsecgps.so
-#    vendor/samsung/__DEVICE__/proprietary/lib/libcamera.so:obj/lib/libcamera.so \\
-#    vendor/samsung/__DEVICE__/proprietary/lib/libseccameraadaptor.so:obj/lib/libseccameraadaptor.so \\
-#    vendor/samsung/__DEVICE__/proprietary/lib/libseccamera.so:obj/lib/libseccamera.so \\
-#    vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:obj/lib/libs3cjpeg.so
-#    vendor/samsung/__DEVICE__/proprietary/lib/libsec-ril40.so:obj/lib/libsec-ril40.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsecgps.so:obj/lib/libsecgps.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libcamera.so:obj/lib/libcamera.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:obj/lib/libs3cjpeg.so
 
 # vold
 PRODUCT_COPY_FILES += \\
@@ -260,14 +262,15 @@ PRODUCT_COPY_FILES += \\
 #
 # Camera
 #
-#PRODUCT_COPY_FILES += \\
-#    vendor/samsung/__DEVICE__/proprietary/lib/libarccamera.so:system/lib/libarccamera.so \\
-#    vendor/samsung/__DEVICE__/proprietary/lib/libcamerafirmwarejni.so:system/lib/libcamerafirmwarejni.so \\
-#    vendor/samsung/__DEVICE__/proprietary/lib/libcamera.so:system/lib/libcamera.so \\
-#    vendor/samsung/__DEVICE__/proprietary/lib/libseccameraadaptor.so:system/lib/libseccameraadaptor.so \\
-#    vendor/samsung/__DEVICE__/proprietary/lib/libseccamera.so:system/lib/libseccamera.so \\
-#    vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:system/lib/libs3cjpeg.so
-
+PRODUCT_COPY_FILES += \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libarccamera.so:system/lib/libarccamera.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libcamerafirmwarejni.so:system/lib/libcamerafirmwarejni.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libcamera.so:system/lib/libcamera.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libseccameraadaptor.so:system/lib/libseccameraadaptor.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libseccamera.so:system/lib/libseccamera.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:system/lib/libs3cjpeg.so \\
+    vendor/samsung/__DEVICE__/proprietary/cameradata/datapattern_420sp.yuv:system/cameradata/datapattern_420sp.yuv \\
+    vendor/samsung/__DEVICE__/proprietary/cameradata/datapattern_front_420sp.yuv:system/cameradata/datapattern_front_420sp.yuv
 #
 # RIL
 #
