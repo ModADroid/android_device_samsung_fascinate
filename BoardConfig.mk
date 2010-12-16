@@ -21,7 +21,7 @@
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
 
-USE_CAMERA_STUB := true
+#USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
 -include vendor/samsung/SCH-I500/BoardConfigVendor.mk
@@ -43,6 +43,7 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 # Sound related defines
 BOARD_USES_ALSA_AUDIO := true
 BUILD_WITH_ALSA_UTILS := true
+ALSA_DEFAULT_SAMPLE_RATE := 44100
 
 # WiFi related defines
 WIFI_FIRMWARE_LOADER := "wlservice"
@@ -55,6 +56,9 @@ WIFI_DRIVER_APS_FIRMWARE_NAME := "bcm4329_aps.bin"
 WIFI_DRIVER_STA_FIRMWARE_NAME := "bcm4329_sta.bin"
 WIFI_DRIVER_MODULE_NAME := "dhd"
 
+#USB tethering
+RNDIS_DEVICE := "/sys/devices/virtual/sec/switch/tethering"
+
 # Bluetooth related defines
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_HAVE_BLUETOOTH := true
@@ -62,6 +66,7 @@ BT_USE_BTL_IF := true
 BT_ALT_STACK := true
 BRCM_BTL_INCLUDE_A2DP := true
 BRCM_BT_USE_BTL_IF := true
+WITH_A2DP := true
 
 BOARD_EGL_CFG := device/samsung/fascinate/prebuilt/egl.cfg
 
@@ -97,7 +102,7 @@ BOARD_SYSTEM_FILESYSTEM_OPTIONS := llw,check=no
 BOARD_CACHE_DEVICE := /dev/block/stl11
 BOARD_CACHE_FILESYSTEM := auto
 BOARD_CACHE_FILESYSTEM_OPTIONS := llw,check=no,nosuid,nodev
-#BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1
+BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
 #BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1p1
 #BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
 #BOARD_USES_BMLUTILS := true
