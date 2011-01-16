@@ -65,8 +65,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.carrier=Verizon \
 	net.dns1=8.8.8.8 \
 	net.dns2=8.8.4.4 \
-	mobiledata.interfaces=eth0,ppp0 \
-	phone.ril.classname=com.android.internal.telephony.SamsungRIL
+	mobiledata.interfaces=eth0,ppp0
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise

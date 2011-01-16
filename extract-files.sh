@@ -42,7 +42,6 @@ done
 FILES="
 app/Swype.apk
 bin/dhcpcd
-bin/drexe
 bin/pppd
 bin/pppd_runner
 bin/rild
@@ -58,7 +57,6 @@ bin/sensorserver_yamaha
 bin/gpsd/glgps_samsungJupiter
 bin/pv2way_omx_engine_test
 bin/hciattach
-bin/npsmobex
 bin/btld
 bin/dbus-daemon
 bin/BCM4329B1_002.002.023.0417.0464.hcd
@@ -99,6 +97,7 @@ lib/libsec-ril40.so
 lib/libreference-ril.so
 lib/libsecril-client.so
 lib/libwlservice.so
+lib/libwpa_client.so
 
 lib/libarccamera.so
 lib/libcamerafirmwarejni.so
@@ -106,11 +105,12 @@ lib/libcamera.so
 lib/libseccameraadaptor.so
 lib/libseccamera.so
 lib/libs3cjpeg.so
+lib/libskiagl.so
 
-lib/libspeech.so
-lib/libgtalk_jni.so
 lib/libhardware.so
 lib/libhardware_legacy.so
+lib/libspeech.so
+lib/libgtalk_jni.so
 lib/libSwypeCore.so
 
 lib/libs263domxoc.so
@@ -203,20 +203,21 @@ done
 PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsecril-client.so:obj/lib/libsecril-client.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libgps.so:obj/lib/libgps.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libsecgps.so:obj/lib/libsecgps.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libcamera.so:obj/lib/libcamera.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:obj/lib/libs3cjpeg.so
+    vendor/samsung/__DEVICE__/proprietary/lib/libsecgps.so:obj/lib/libsecgps.so
+#    vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:obj/lib/libs3cjpeg.so \\
+#    vendor/samsung/__DEVICE__/proprietary/lib/libcamera.so:obj/lib/libcamera.so
 
 # vold
-PRODUCT_COPY_FILES += \\
-    vendor/samsung/__DEVICE__/proprietary/bin/vold:system/bin/vold \\
-    vendor/samsung/__DEVICE__/proprietary/etc/vold.conf:system/etc/vold.conf
+#PRODUCT_COPY_FILES += \\
+#    vendor/samsung/__DEVICE__/proprietary/bin/vold:system/bin/vold \\
+#    vendor/samsung/__DEVICE__/proprietary/etc/vold.conf:system/etc/vold.conf
 
 #
 # Wifi
 #
 PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libwlservice.so:system/lib/libwlservice.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libwpa_client.so:system/lib/libwpa_client.so \\
     vendor/samsung/__DEVICE__/proprietary/etc/wifi/nvram_net.txt:system/etc/wifi/nvram_net.txt \\
     vendor/samsung/__DEVICE__/proprietary/etc/wifi/nvram_mfg.txt:system/etc/wifi/nvram_mfg.txt \\
     vendor/samsung/__DEVICE__/proprietary/etc/wifi/bcm4329_aps.bin:system/etc/wifi/bcm4329_aps.bin \\
@@ -262,15 +263,17 @@ PRODUCT_COPY_FILES += \\
 #
 # Camera
 #
-PRODUCT_COPY_FILES += \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libarccamera.so:system/lib/libarccamera.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libcamerafirmwarejni.so:system/lib/libcamerafirmwarejni.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libcamera.so:system/lib/libcamera.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libseccameraadaptor.so:system/lib/libseccameraadaptor.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libseccamera.so:system/lib/libseccamera.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:system/lib/libs3cjpeg.so \\
-    vendor/samsung/__DEVICE__/proprietary/cameradata/datapattern_420sp.yuv:system/cameradata/datapattern_420sp.yuv \\
-    vendor/samsung/__DEVICE__/proprietary/cameradata/datapattern_front_420sp.yuv:system/cameradata/datapattern_front_420sp.yuv
+#PRODUCT_COPY_FILES += \\
+#    vendor/samsung/__DEVICE__/proprietary/lib/libcamera.so:system/lib/libcamera.so \\
+#    vendor/samsung/__DEVICE__/proprietary/lib/libarccamera.so:system/lib/libarccamera.so \\
+#    vendor/samsung/__DEVICE__/proprietary/lib/libcamerafirmwarejni.so:system/lib/libcamerafirmwarejni.so \\
+#    vendor/samsung/__DEVICE__/proprietary/lib/libseccameraadaptor.so:system/lib/libseccameraadaptor.so \\
+#    vendor/samsung/__DEVICE__/proprietary/lib/libseccamera.so:system/lib/libseccamera.so \\
+#    vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:system/lib/libs3cjpeg.so \\
+#    vendor/samsung/__DEVICE__/proprietary/lib/libskiagl.so:system/lib/libskiagl.so \\
+#    vendor/samsung/__DEVICE__/proprietary/cameradata/datapattern_420sp.yuv:system/cameradata/datapattern_420sp.yuv \\
+#    vendor/samsung/__DEVICE__/proprietary/cameradata/datapattern_front_420sp.yuv:system/cameradata/datapattern_front_420sp.yuv
+
 #
 # RIL
 #
@@ -282,7 +285,6 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/xbin/ipctool:system/xbin/ipctool \\
     vendor/samsung/__DEVICE__/proprietary/xbin/ipcdump:system/xbin/ipcdump \\
     vendor/samsung/__DEVICE__/proprietary/bin/dhcpcd:system/bin/dhcpcd \\
-    vendor/samsung/__DEVICE__/proprietary/bin/drexe:system/bin/drexe \\
     vendor/samsung/__DEVICE__/proprietary/etc/dhcpcd/dhcpcd-hooks/01-test:system/etc/dhcpcd/dhcpcd-hooks/01-test \\
     vendor/samsung/__DEVICE__/proprietary/etc/dhcpcd/dhcpcd-hooks/20-dns.conf:system/etc/dhcpcd/dhcpcd-hooks/20-dns.conf \\
     vendor/samsung/__DEVICE__/proprietary/etc/dhcpcd/dhcpcd-hooks/95-configured:system/etc/dhcpcd/dhcpcd-hooks/95-configured \\
@@ -368,12 +370,11 @@ PRODUCT_COPY_FILES += \\
 #
 PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/bin/hciattach:system/bin/hciattach \\
-    vendor/samsung/__DEVICE__/proprietary/bin/npsmobex:system/bin/npsmobex \\
     vendor/samsung/__DEVICE__/proprietary/bin/BCM4329B1_002.002.023.0417.0464.hcd:system/bin/BCM4329B1_002.002.023.0417.0464.hcd \\
     vendor/samsung/__DEVICE__/proprietary/bin/btld:system/bin/btld \\
-    vendor/samsung/__DEVICE__/proprietary/bin/dbus-daemon:system/bin/dbus-daemon
-#    vendor/samsung/__DEVICE__/proprietary/lib/libhardware.so:system/lib/libhardware.so \\
-#    vendor/samsung/__DEVICE__/proprietary/lib/libhardware_legacy.so:system/lib/libhardware_legacy.so
+    vendor/samsung/__DEVICE__/proprietary/bin/dbus-daemon:system/bin/dbus-daemon \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libhardware.so:system/lib/libhardware.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libhardware_legacy.so:system/lib/libhardware_legacy.so
 
 #
 # Swype (cuz it works :P)
