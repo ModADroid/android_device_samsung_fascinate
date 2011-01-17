@@ -29,7 +29,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/fascinate/apns-conf.xml:system/etc/apns-conf.xml
 
 ## (2) Also get non-open-source GSM-specific aspects if available
-$(call inherit-product-if-exists, vendor/samsung/SCH-I500/SCH-I500-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/fascinate/fascinate-vendor.mk)
 
 ## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -143,7 +143,7 @@ $(call inherit-product, build/target/product/full.mk)
 
 
 PRODUCT_NAME := full_fascinate
-PRODUCT_DEVICE := SCH-I500
+PRODUCT_DEVICE := fascinate
 PRODUCT_MODEL := Fascinate
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung

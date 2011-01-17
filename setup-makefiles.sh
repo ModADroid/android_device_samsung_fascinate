@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE=SCH-I500
+DEVICE=fascinate
 
 mkdir -p ../../../vendor/samsung/$DEVICE
 
@@ -74,8 +74,8 @@ BOARD_GPS_LIBRARIES := libgps libsecgps
 
 EOF
 
-mkdir -p ../../../vendor/samsung/SCH-I500/overlay/packages/apps/Launcher2/res/layout
-(cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/samsung/SCH-I500/overlay/packages/apps/Launcher2/res/layout/all_apps.xml
+mkdir -p ../../../vendor/samsung/fascinate/overlay/packages/apps/Launcher2/res/layout
+(cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/samsung/fascinate/overlay/packages/apps/Launcher2/res/layout/all_apps.xml
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2010 The Android Open Source Project
 

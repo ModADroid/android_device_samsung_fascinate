@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE=SCH-I500
+DEVICE=fascinate
 
 rm -rf ../../../vendor/samsung/$DEVICE
 mkdir -p ../../../vendor/samsung/$DEVICE/proprietary

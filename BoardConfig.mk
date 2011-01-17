@@ -24,7 +24,7 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/samsung/SCH-I500/BoardConfigVendor.mk
+-include vendor/samsung/fascinate/BoardConfigVendor.mk
 
 TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := SCH-I500
