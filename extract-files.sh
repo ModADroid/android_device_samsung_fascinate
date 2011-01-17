@@ -19,6 +19,20 @@ DEVICE=fascinate
 rm -rf ../../../vendor/samsung/$DEVICE
 mkdir -p ../../../vendor/samsung/$DEVICE/proprietary
 
+if [ -f "$1" ]; then
+	rm -rf tmp
+	mkdir tmp
+	unzip -q "$1" -d tmp
+	if [ $? != 0 ]; then
+		echo "$1 is not a valid zip file. Bye."
+		exit 1
+	fi
+	echo "$1 successfully unzip'd. Copying files..."
+	ZIP="true"
+else
+	unset ZIP
+fi
+
 DIRS="
 app
 bin
@@ -31,6 +45,7 @@ firmware
 lib/egl
 lib/hw
 lib/SCH-I500
+media
 tts/lang_pico
 xbin
 "
@@ -207,8 +222,13 @@ media/Disconnected.qmg
 "
 
 for FILE in $FILES; do
-	adb pull system/$FILE ../../../vendor/samsung/$DEVICE/proprietary/$FILE
+	if [ "$ZIP" ]; then
+		cp tmp/system/"$FILE" ../../../vendor/samsung/$DEVICE/proprietary/$FILE
+	else
+		adb pull system/$FILE ../../../vendor/samsung/$DEVICE/proprietary/$FILE
+	fi
 done
+if [ "$ZIP" ]; then rm -rf tmp ; fi
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/samsung/$DEVICE/$DEVICE-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project
@@ -236,9 +256,9 @@ PRODUCT_COPY_FILES += \\
 #    vendor/samsung/__DEVICE__/proprietary/lib/libcamera.so:obj/lib/libcamera.so
 
 # vold
-#PRODUCT_COPY_FILES += \\
-#    vendor/samsung/__DEVICE__/proprietary/bin/vold:system/bin/vold \\
-#    vendor/samsung/__DEVICE__/proprietary/etc/vold.conf:system/etc/vold.conf
+PRODUCT_COPY_FILES += \\
+    vendor/samsung/__DEVICE__/proprietary/bin/vold:system/bin/vold \\
+    vendor/samsung/__DEVICE__/proprietary/etc/vold.conf:system/etc/vold.conf
 
 #
 # Wifi
@@ -326,15 +346,15 @@ PRODUCT_COPY_FILES += \\
 # PPP
 #
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/proprietary/pppd_runner:system/bin/pppd_runner \
-    $(LOCAL_PATH)/proprietary/init.cdma-pppd:system/etc/init.cdma-pppd \
-    $(LOCAL_PATH)/proprietary/init.gprs-pppd:system/etc/init.gprs-pppd \
-    $(LOCAL_PATH)/proprietary/chap-secrets:system/etc/ppp/chap-secrets \
-    $(LOCAL_PATH)/proprietary/ip-up:system/etc/ppp/ip-up \
-    $(LOCAL_PATH)/proprietary/ip-down:system/etc/ppp/ip-down \
-    $(LOCAL_PATH)/proprietary/ip-up-vpn:system/etc/ppp/ip-up-vpn \
-    $(LOCAL_PATH)/proprietary/pap-secrets:system/etc/ppp/pap-secrets \
-    $(LOCAL_PATH)/proprietary/options:system/etc/ppp/options
+    vendor/samsung/__DEVICE__/proprietary/pppd_runner:system/bin/pppd_runner \
+    vendor/samsung/__DEVICE__/proprietary/init.cdma-pppd:system/etc/init.cdma-pppd \
+    vendor/samsung/__DEVICE__/proprietary/init.gprs-pppd:system/etc/init.gprs-pppd \
+    vendor/samsung/__DEVICE__/proprietary/chap-secrets:system/etc/ppp/chap-secrets \
+    vendor/samsung/__DEVICE__/proprietary/ip-up:system/etc/ppp/ip-up \
+    vendor/samsung/__DEVICE__/proprietary/ip-down:system/etc/ppp/ip-down \
+    vendor/samsung/__DEVICE__/proprietary/ip-up-vpn:system/etc/ppp/ip-up-vpn \
+    vendor/samsung/__DEVICE__/proprietary/pap-secrets:system/etc/ppp/pap-secrets \
+    vendor/samsung/__DEVICE__/proprietary/options:system/etc/ppp/options
 
 #
 # GPS
@@ -414,10 +434,11 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/bin/BCM4329B1_002.002.023.0417.0464.hcd:system/bin/BCM4329B1_002.002.023.0417.0464.hcd \\
     vendor/samsung/__DEVICE__/proprietary/bin/btld:system/bin/btld \\
     vendor/samsung/__DEVICE__/proprietary/bin/dbus-daemon:system/bin/dbus-daemon \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libhardware.so:system/lib/libhardware.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libhardware_legacy.so:system/lib/libhardware_legacy.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libskiagl.so:system/lib/libskiagl.so \\
     vendor/samsung/__DEVICE__/proprietary/bin/immvibed:system/bin/immvibed
+#    vendor/samsung/__DEVICE__/proprietary/lib/libhardware.so:system/lib/libhardware.so \\
+#    vendor/samsung/__DEVICE__/proprietary/lib/libhardware_legacy.so:system/lib/libhardware_legacy.so \\
+#    vendor/samsung/__DEVICE__/proprietary/lib/libskiagl.so:system/lib/libskiagl.so \\
+
 #
 # Swype (cuz it works :P)
 #
