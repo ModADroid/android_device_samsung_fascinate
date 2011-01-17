@@ -42,6 +42,7 @@ done
 FILES="
 app/Swype.apk
 bin/dhcpcd
+bin/immvibed
 bin/pppd
 bin/pppd_runner
 bin/rild
@@ -374,7 +375,8 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/bin/dbus-daemon:system/bin/dbus-daemon \\
     vendor/samsung/__DEVICE__/proprietary/lib/libhardware.so:system/lib/libhardware.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libhardware_legacy.so:system/lib/libhardware_legacy.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libskiagl.so:system/lib/libskiagl.so
+    vendor/samsung/__DEVICE__/proprietary/lib/libskiagl.so:system/lib/libskiagl.so \\
+    vendor/samsung/__DEVICE__/proprietary/bin/immvibed:system/bin/immvibed
 #
 # Swype (cuz it works :P)
 #
