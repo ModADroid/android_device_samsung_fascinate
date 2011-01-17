@@ -72,6 +72,8 @@ etc/ppp/ip-up
 etc/ppp/ip-up-vpn
 etc/ppp/options
 etc/ppp/pap-secrets
+etc/init.cdma-pppd
+etc/init.gprs-pppd
 etc/vold.conf
 etc/wifi/nvram_net.txt
 etc/wifi/nvram_mfg.txt
@@ -319,6 +321,20 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/bin/rild:system/bin/rild \\
     vendor/samsung/__DEVICE__/proprietary/lib/libril.so:system/lib/libril.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libreference-ril.so:system/lib/libreference-ril.so
+
+#
+# PPP
+#
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/pppd_runner:system/bin/pppd_runner \
+    $(LOCAL_PATH)/proprietary/init.cdma-pppd:system/etc/init.cdma-pppd \
+    $(LOCAL_PATH)/proprietary/init.gprs-pppd:system/etc/init.gprs-pppd \
+    $(LOCAL_PATH)/proprietary/chap-secrets:system/etc/ppp/chap-secrets \
+    $(LOCAL_PATH)/proprietary/ip-up:system/etc/ppp/ip-up \
+    $(LOCAL_PATH)/proprietary/ip-down:system/etc/ppp/ip-down \
+    $(LOCAL_PATH)/proprietary/ip-up-vpn:system/etc/ppp/ip-up-vpn \
+    $(LOCAL_PATH)/proprietary/pap-secrets:system/etc/ppp/pap-secrets \
+    $(LOCAL_PATH)/proprietary/options:system/etc/ppp/options
 
 #
 # GPS
