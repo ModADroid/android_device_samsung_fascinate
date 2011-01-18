@@ -53,7 +53,7 @@ DEVICE_PACKAGE_OVERLAYS := vendor/samsung/__DEVICE__/overlay
 \$(call inherit-product, vendor/samsung/__DEVICE__/__DEVICE__-vendor-blobs.mk)
 EOF
 
-(cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/samsung/SCH-I500/BoardConfigVendor.mk
+(cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/samsung/fascinate/BoardConfigVendor.mk
 # Copyright (C) 2010 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
