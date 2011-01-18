@@ -22,6 +22,10 @@
 # against the traditional rules of inheritance).
 
 USE_CAMERA_STUB := true
+BOARD_USES_NEXUS_S_LIBS := true
+BOARD_USES_NEXUS_S_AUDIO := true
+BOARD_USES_OVERLAY := true
+#BOARD_USES_FROYO := true
 
 # inherit from the proprietary version
 -include vendor/samsung/fascinate/BoardConfigVendor.mk

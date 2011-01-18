@@ -252,8 +252,8 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsecril-client.so:obj/lib/libsecril-client.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libgps.so:obj/lib/libgps.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsecgps.so:obj/lib/libsecgps.so
-#    vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:obj/lib/libs3cjpeg.so \\
 #    vendor/samsung/__DEVICE__/proprietary/lib/libcamera.so:obj/lib/libcamera.so
+#    vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:obj/lib/libs3cjpeg.so
 
 # vold
 PRODUCT_COPY_FILES += \\
@@ -346,15 +346,15 @@ PRODUCT_COPY_FILES += \\
 # PPP
 #
 PRODUCT_COPY_FILES += \
-    vendor/samsung/__DEVICE__/proprietary/pppd_runner:system/bin/pppd_runner \
-    vendor/samsung/__DEVICE__/proprietary/init.cdma-pppd:system/etc/init.cdma-pppd \
-    vendor/samsung/__DEVICE__/proprietary/init.gprs-pppd:system/etc/init.gprs-pppd \
-    vendor/samsung/__DEVICE__/proprietary/chap-secrets:system/etc/ppp/chap-secrets \
-    vendor/samsung/__DEVICE__/proprietary/ip-up:system/etc/ppp/ip-up \
-    vendor/samsung/__DEVICE__/proprietary/ip-down:system/etc/ppp/ip-down \
-    vendor/samsung/__DEVICE__/proprietary/ip-up-vpn:system/etc/ppp/ip-up-vpn \
-    vendor/samsung/__DEVICE__/proprietary/pap-secrets:system/etc/ppp/pap-secrets \
-    vendor/samsung/__DEVICE__/proprietary/options:system/etc/ppp/options
+    vendor/samsung/__DEVICE__/proprietary/bin/pppd_runner:system/bin/pppd_runner \
+    vendor/samsung/__DEVICE__/proprietary/etc/init.cdma-pppd:system/etc/init.cdma-pppd \
+    vendor/samsung/__DEVICE__/proprietary/etc/init.gprs-pppd:system/etc/init.gprs-pppd \
+    vendor/samsung/__DEVICE__/proprietary/etc/ppp/chap-secrets:system/etc/ppp/chap-secrets \
+    vendor/samsung/__DEVICE__/proprietary/etc/ppp/ip-up:system/etc/ppp/ip-up \
+    vendor/samsung/__DEVICE__/proprietary/etc/ppp/ip-down:system/etc/ppp/ip-down \
+    vendor/samsung/__DEVICE__/proprietary/etc/ppp/ip-up-vpn:system/etc/ppp/ip-up-vpn \
+    vendor/samsung/__DEVICE__/proprietary/etc/ppp/pap-secrets:system/etc/ppp/pap-secrets \
+    vendor/samsung/__DEVICE__/proprietary/etc/ppp/options:system/etc/ppp/options
 
 #
 # GPS
