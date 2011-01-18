@@ -255,11 +255,6 @@ PRODUCT_COPY_FILES += \\
 #    vendor/samsung/__DEVICE__/proprietary/lib/libcamera.so:obj/lib/libcamera.so
 #    vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:obj/lib/libs3cjpeg.so
 
-# vold
-PRODUCT_COPY_FILES += \\
-    vendor/samsung/__DEVICE__/proprietary/bin/vold:system/bin/vold \\
-    vendor/samsung/__DEVICE__/proprietary/etc/vold.conf:system/etc/vold.conf
-
 #
 # Wifi
 #

@@ -92,6 +92,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/fascinate/prebuilt/asound.conf:system/etc/asound.conf
 
+# vold
+PRODUCT_COPY_FILES += \
+    device/samsung/fascinate/prebuilt/vold.fstab:system/etc/vold.fstab \
+    device/samsung/fascinate/prebuilt/vold.conf:system/etc/vold.conf
+
 # Install the features available on this device.
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \

@@ -1,22 +1,6 @@
-# Copyright (C) 2009 The Android Open Source Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
-
-## Vold 2.0 fstab for Samsung Galaxy S
-#
-## - Wes Garner (wesgarner@gmail.com)
-## - noobnl 
+## Vold 2.0 Generic fstab
+## - San Mehat (san@android.com)
+## 
 
 #######################
 ## Regular device mount
@@ -28,5 +12,31 @@
 ## <sysfs_path> - List of sysfs paths to source devices
 ######################
 
+## Example of a standard sdcard mount for the emulator / Dream
 # Mounts the first usable partition of the specified device
-dev_mount sdcard_int /mnt/sdcard 1 /devices/platform/s3c-sdhci.2/mmc_host/mmc2/mmc2:0001/block/mmcblk0
+#dev_mount sdcard /mnt/sdcard auto /devices/platform/goldfish_mmc.0 /devices/platform/msm_sdcc.2/mmc_host/mmc1
+
+## Example of a dual card setup
+# dev_mount left_sdcard  /sdcard1  auto /devices/platform/goldfish_mmc.0 /devices/platform/msm_sdcc.2/mmc_host/mmc1
+# dev_mount right_sdcard /sdcard2  auto /devices/platform/goldfish_mmc.1 /devices/platform/msm_sdcc.3/mmc_host/mmc1
+
+## Example of specifying a specific partition for mounts
+# dev_mount sdcard /sdcard 2 /devices/platform/goldfish_mmc.0 /devices/platform/msm_sdcc.2/mmc_host/mmc1
+
+# internal sdcard
+#{
+#	mount_deep = 0
+#	ums_path = /sys/devices/platform/s3c-usbgadget/gadget/lun1/file
+#	asec = disable
+#	mbr_policy = skip
+#}
+dev_mount emmc /mnt/emmc 1 /devices/platform/s3c-sdhci.0/mmc_host/mmc0
+
+# external sdcard
+{
+	mount_deep = 1
+	ums_path = /sys/devices/platform/s3c-usbgadget/gadget/lun2/file
+	asec = enable
+	mbr_policy = overwrite
+}
+dev_mount sdcard /mnt/sdcard auto /devices/platform/s3c-sdhci.2/mmc_host/mmc2
