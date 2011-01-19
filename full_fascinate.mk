@@ -94,8 +94,7 @@ PRODUCT_COPY_FILES += \
 
 # vold
 PRODUCT_COPY_FILES += \
-    device/samsung/fascinate/prebuilt/vold.fstab:system/etc/vold.fstab \
-    device/samsung/fascinate/prebuilt/vold.conf:system/etc/vold.conf
+    device/samsung/fascinate/prebuilt/vold.fstab:system/etc/vold.fstab
 
 # Install the features available on this device.
 PRODUCT_COPY_FILES += \
