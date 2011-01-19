@@ -341,14 +341,14 @@ PRODUCT_COPY_FILES += \\
 # PPP
 #
 PRODUCT_COPY_FILES += \
-    vendor/samsung/__DEVICE__/proprietary/bin/pppd_runner:system/bin/pppd_runner \
-    vendor/samsung/__DEVICE__/proprietary/etc/init.cdma-pppd:system/etc/init.cdma-pppd \
-    vendor/samsung/__DEVICE__/proprietary/etc/init.gprs-pppd:system/etc/init.gprs-pppd \
-    vendor/samsung/__DEVICE__/proprietary/etc/ppp/chap-secrets:system/etc/ppp/chap-secrets \
-    vendor/samsung/__DEVICE__/proprietary/etc/ppp/ip-up:system/etc/ppp/ip-up \
-    vendor/samsung/__DEVICE__/proprietary/etc/ppp/ip-down:system/etc/ppp/ip-down \
-    vendor/samsung/__DEVICE__/proprietary/etc/ppp/ip-up-vpn:system/etc/ppp/ip-up-vpn \
-    vendor/samsung/__DEVICE__/proprietary/etc/ppp/pap-secrets:system/etc/ppp/pap-secrets \
+    vendor/samsung/__DEVICE__/proprietary/bin/pppd_runner:system/bin/pppd_runner \\
+    vendor/samsung/__DEVICE__/proprietary/etc/init.cdma-pppd:system/etc/init.cdma-pppd \\
+    vendor/samsung/__DEVICE__/proprietary/etc/init.gprs-pppd:system/etc/init.gprs-pppd \\
+    vendor/samsung/__DEVICE__/proprietary/etc/ppp/chap-secrets:system/etc/ppp/chap-secrets \\
+    vendor/samsung/__DEVICE__/proprietary/etc/ppp/ip-up:system/etc/ppp/ip-up \\
+    vendor/samsung/__DEVICE__/proprietary/etc/ppp/ip-down:system/etc/ppp/ip-down \\
+    vendor/samsung/__DEVICE__/proprietary/etc/ppp/ip-up-vpn:system/etc/ppp/ip-up-vpn \\
+    vendor/samsung/__DEVICE__/proprietary/etc/ppp/pap-secrets:system/etc/ppp/pap-secrets \\
     vendor/samsung/__DEVICE__/proprietary/etc/ppp/options:system/etc/ppp/options
 
 #
@@ -429,10 +429,10 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/bin/BCM4329B1_002.002.023.0417.0464.hcd:system/bin/BCM4329B1_002.002.023.0417.0464.hcd \\
     vendor/samsung/__DEVICE__/proprietary/bin/btld:system/bin/btld \\
     vendor/samsung/__DEVICE__/proprietary/bin/dbus-daemon:system/bin/dbus-daemon \\
-    vendor/samsung/__DEVICE__/proprietary/bin/immvibed:system/bin/immvibed
-#    vendor/samsung/__DEVICE__/proprietary/lib/libhardware.so:system/lib/libhardware.so \\
-#    vendor/samsung/__DEVICE__/proprietary/lib/libhardware_legacy.so:system/lib/libhardware_legacy.so \\
-#    vendor/samsung/__DEVICE__/proprietary/lib/libskiagl.so:system/lib/libskiagl.so \\
+    vendor/samsung/__DEVICE__/proprietary/bin/immvibed:system/bin/immvibed \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libhardware.so:system/lib/libhardware.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libhardware_legacy.so:system/lib/libhardware_legacy.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libskiagl.so:system/lib/libskiagl.so
 
 #
 # Swype (cuz it works :P)
