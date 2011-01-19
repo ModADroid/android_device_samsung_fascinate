@@ -340,7 +340,7 @@ PRODUCT_COPY_FILES += \\
 #
 # PPP
 #
-PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/bin/pppd_runner:system/bin/pppd_runner \\
     vendor/samsung/__DEVICE__/proprietary/etc/init.cdma-pppd:system/etc/init.cdma-pppd \\
     vendor/samsung/__DEVICE__/proprietary/etc/init.gprs-pppd:system/etc/init.gprs-pppd \\
