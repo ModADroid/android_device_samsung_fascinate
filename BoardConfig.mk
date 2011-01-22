@@ -21,10 +21,9 @@
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
 
-USE_CAMERA_STUB := true
+#USE_CAMERA_STUB := true
 BOARD_USES_NEXUS_S_LIBS := true
 BOARD_USES_NEXUS_S_AUDIO := true
-BOARD_USES_OVERLAY := true
 BOARD_USES_FROYO := true
 
 # inherit from the proprietary version
@@ -32,8 +31,6 @@ BOARD_USES_FROYO := true
 
 TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := SCH-I500
-#TARGET_NO_RECOVERY := true
-#TARGET_NO_KERNEL := true
 
 TARGET_BOARD := SCH-I500
 TARGET_BOARD_PLATFORM := s5pc110
@@ -43,11 +40,6 @@ TARGET_BOARD_PLATFORM_GPU := POWERVR_SGX540_120
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
-
-# Sound related defines
-BOARD_USES_ALSA_AUDIO := true
-BUILD_WITH_ALSA_UTILS := true
-ALSA_DEFAULT_SAMPLE_RATE := 44100
 
 # WiFi related defines
 WIFI_FIRMWARE_LOADER := "wlservice"
@@ -107,7 +99,3 @@ BOARD_CACHE_DEVICE := /dev/block/stl11
 BOARD_CACHE_FILESYSTEM := auto
 BOARD_CACHE_FILESYSTEM_OPTIONS := llw,check=no,nosuid,nodev
 BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
-#BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1p1
-#BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
-#BOARD_USES_BMLUTILS := true
-#BOARD_CUSTOM_RECOVERY_KEYMAPPING := true
