@@ -88,8 +88,8 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/fascinate/overlay
 # media profiles and capabilities spec
 $(call inherit-product, device/samsung/fascinate/media_a1026.mk)
 # media config xml file
-#PRODUCT_COPY_FILES += \
-#    device/samsung/fascinate/media_profiles.xml:system/etc/media_profiles.xml
+PRODUCT_COPY_FILES += \
+    device/samsung/fascinate/media_profiles.xml:system/etc/media_profiles.xml
 
 # asound.conf
 PRODUCT_COPY_FILES += \
