@@ -18,6 +18,7 @@
 # This is the product configuration for a generic GSM passion,
 # not specialized for any geography.
 #
+$(call inherit-product, device/samsung/common/galaxys.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
