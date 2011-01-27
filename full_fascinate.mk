@@ -155,3 +155,5 @@ PRODUCT_DEVICE := fascinate
 PRODUCT_MODEL := Fascinate
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung
+PRODUCT_POLICY := android.policy_phone
+
