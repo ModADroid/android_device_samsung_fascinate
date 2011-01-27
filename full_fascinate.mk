@@ -20,6 +20,9 @@
 #
 $(call inherit-product, device/samsung/common/galaxys.mk)
 
+# use libs from nexus s
+$(call inherit-product, device/samsung/common/galaxys.mk)
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # The gps config appropriate for this device
