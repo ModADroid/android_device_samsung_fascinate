@@ -36,7 +36,6 @@ fi
 DIRS="
 app
 bin
-bin/gpsd
 cameradata
 etc/dhcpcd/dhcpcd-hooks
 etc/ppp
@@ -55,7 +54,6 @@ for DIR in $DIRS; do
 done
 
 FILES="
-app/Swype.apk
 bin/dhcpcd
 bin/immvibed
 bin/pppd
@@ -65,17 +63,15 @@ bin/rilclient-test
 bin/vold
 bin/wlservice
 bin/wpa_supplicant
-bin/wpa_cli
 bin/pvrsrvinit
 bin/sensorcalibutil_yamaha
 bin/sensorstatutil_yamaha
 bin/sensorserver_yamaha
-bin/gpsd/glgps_samsungJupiter
 bin/pv2way_omx_engine_test
 bin/hciattach
 bin/btld
 bin/dbus-daemon
-bin/BCM4329B1_002.002.023.0417.0464.hcd
+bin/BCM4329B1_002.002.023.0417.0430.hcd
 
 cameradata/datapattern_420sp.yuv
 cameradata/datapattern_front_420sp.yuv
@@ -105,7 +101,6 @@ etc/dhcpcd/dhcpcd-hooks/95-configured
 etc/dhcpcd/dhcpcd.conf
 etc/dhcpcd/dhcpcd-run-hooks
 etc/gps.conf
-etc/jupiter.xml
 etc/pvOMXcfg.ini
 
 lib/libgps.so
@@ -127,9 +122,6 @@ lib/libskiagl.so
 
 lib/libhardware.so
 lib/libhardware_legacy.so
-lib/libspeech.so
-lib/libgtalk_jni.so
-lib/libSwypeCore.so
 
 lib/libs263domxoc.so
 lib/libs263eomxoc.so
@@ -179,21 +171,12 @@ lib/hw/lights.s5pc110.so
 lib/hw/sensors.default.so
 lib/hw/gralloc.s5pc110.so
 
-tts/lang_pico/de-DE_gl0_sg.bin
-tts/lang_pico/de-DE_ta.bin
-tts/lang_pico/en-GB_kh0_sg.bin
-tts/lang_pico/en-GB_ta.bin
 tts/lang_pico/en-US_lh0_sg.bin
 tts/lang_pico/en-US_ta.bin
 tts/lang_pico/es-ES_zl0_sg.bin
 tts/lang_pico/es-ES_ta.bin
-tts/lang_pico/fr-FR_nk0_sg.bin
-tts/lang_pico/fr-FR_ta.bin
-tts/lang_pico/it-IT_cm0_sg.bin
-tts/lang_pico/it-IT_ta.bin
 
 xbin/ipctool
-xbin/ipcdump
 
 bin/playlpm
 bin/charging_mode
@@ -253,7 +236,6 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libgps.so:obj/lib/libgps.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsecgps.so:obj/lib/libsecgps.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libcamera.so:obj/lib/libcamera.so
-#    vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:obj/lib/libs3cjpeg.so
 
 #
 # Wifi
@@ -270,7 +252,6 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \\
     vendor/samsung/__DEVICE__/proprietary/bin/wlservice:system/bin/wlservice \\
     vendor/samsung/__DEVICE__/proprietary/bin/wpa_supplicant:system/bin/wpa_supplicant
-#    vendor/samsung/__DEVICE__/proprietary/bin/wpa_cli:system/bin/wpa_cli
 
 #
 # Display (3D)
@@ -301,7 +282,6 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/bin/sensorcalibutil_yamaha:system/bin/sensorcalibutil_yamaha \\
     vendor/samsung/__DEVICE__/proprietary/bin/sensorserver_yamaha:system/bin/sensorserver_yamaha \\
     vendor/samsung/__DEVICE__/proprietary/bin/sensorstatutil_yamaha:system/bin/sensorstatutil_yamaha
-#    vendor/samsung/__DEVICE__/proprietary/lib/hw/copybit.s5pc110.so:system/lib/hw/copybit.s5pc110.so 
 
 #
 # Camera
@@ -314,7 +294,6 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/cameradata/datapattern_420sp.yuv:system/cameradata/datapattern_420sp.yuv \\
     vendor/samsung/__DEVICE__/proprietary/cameradata/datapattern_front_420sp.yuv:system/cameradata/datapattern_front_420sp.yuv \\
     vendor/samsung/__DEVICE__/proprietary/lib/libcamera.so:system/lib/libcamera.so
-#    vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:system/lib/libs3cjpeg.so
 
 #
 # RIL
@@ -335,7 +314,6 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/bin/rild:system/bin/rild \\
     vendor/samsung/__DEVICE__/proprietary/lib/libril.so:system/lib/libril.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libreference-ril.so:system/lib/libreference-ril.so
-#    vendor/samsung/__DEVICE__/proprietary/xbin/ipcdump:system/xbin/ipcdump \\
 
 #
 # PPP
@@ -358,8 +336,6 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libgps.so:system/lib/libgps.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsecgps.so:system/lib/libsecgps.so \\
     vendor/samsung/__DEVICE__/proprietary/etc/gps.conf:system/etc/gps.conf
-#    vendor/samsung/__DEVICE__/proprietary/bin/gpsd/glgps_samsungJupiter:system/bin/gpsd/glgps_samsungJupiter \\
-#    vendor/samsung/__DEVICE__/proprietary/etc/jupiter.xml:system/etc/jupiter.xml
 
 #
 # OMX
@@ -389,12 +365,6 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libomx_qcelpdec_sharedlibrary.so:system/lib/libomx_qcelpdec_sharedlibrary.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libomx_qcelpenc_sharedlibrary.so:system/lib/libomx_qcelpenc_sharedlibrary.so \\
     vendor/samsung/__DEVICE__/proprietary/bin/pv2way_omx_engine_test:system/bin/pv2way_omx_engine_test
-#    vendor/samsung/__DEVICE__/proprietary/lib/libSecOMXCore.so:system/lib/libSecOMXCore.so \\
-#    vendor/samsung/__DEVICE__/proprietary/lib/libsoloomx_wmadec_sharedlibrary.so:system/lib/libsoloomx_wmadec_sharedlibrary.so \\
-#    vendor/samsung/__DEVICE__/proprietary/lib/libsoloomx_wmvdec_sharedlibrary.so:system/lib/libsoloomx_wmvdec_sharedlibrary.so \\
-#    vendor/samsung/__DEVICE__/proprietary/lib/libsoloomx_sharedlibrary.so:system/lib/libsoloomx_sharedlibrary.so \\
-#    vendor/samsung/__DEVICE__/proprietary/lib/libsoloomx_wrapper_sharedlibrary.so:system/lib/libsoloomx_wrapper_sharedlibrary.so \\
-#    vendor/samsung/__DEVICE__/proprietary/etc/pvOMXcfg.ini:system/etc/pvOMXcfg.ini \\
 
 #
 # Audio
@@ -405,21 +375,13 @@ PRODUCT_COPY_FILES += \\
 #
 # Voice Search
 #
-#PRODUCT_COPY_FILES += \\
-#    vendor/samsung/__DEVICE__/proprietary/tts/lang_pico/de-DE_gl0_sg.bin:system/tts/lang_pico/de-DE_gl0_sg.bin \\
-#    vendor/samsung/__DEVICE__/proprietary/tts/lang_pico/de-DE_ta.bin:system/tts/lang_pico/de-DE_ta.bin \\
-#    vendor/samsung/__DEVICE__/proprietary/tts/lang_pico/en-GB_kh0_sg.bin:system/tts/lang_pico/en-GB_kh0_sg.bin \\
-#    vendor/samsung/__DEVICE__/proprietary/tts/lang_pico/en-GB_ta.bin:system/tts/lang_pico/en-GB_ta.bin \\
-#    vendor/samsung/__DEVICE__/proprietary/tts/lang_pico/en-US_lh0_sg.bin:system/tts/lang_pico/en-US_lh0_sg.bin \\
-#    vendor/samsung/__DEVICE__/proprietary/tts/lang_pico/en-US_ta.bin:system/tts/lang_pico/en-US_ta.bin \\
-#    vendor/samsung/__DEVICE__/proprietary/tts/lang_pico/es-ES_zl0_sg.bin:system/tts/lang_pico/es-ES_zl0_sg.bin \\
-#    vendor/samsung/__DEVICE__/proprietary/tts/lang_pico/es-ES_ta.bin:system/tts/lang_pico/es-ES_ta.bin \\
-#    vendor/samsung/__DEVICE__/proprietary/tts/lang_pico/fr-FR_nk0_sg.bin:system/tts/lang_pico/fr-FR_nk0_sg.bin \\
-#    vendor/samsung/__DEVICE__/proprietary/tts/lang_pico/fr-FR_ta.bin:system/tts/lang_pico/fr-FR_ta.bin \\
-#    vendor/samsung/__DEVICE__/proprietary/tts/lang_pico/it-IT_cm0_sg.bin:system/tts/lang_pico/it-IT_cm0_sg.bin \\
-#    vendor/samsung/__DEVICE__/proprietary/tts/lang_pico/it-IT_ta.bin:system/tts/lang_pico/it-IT_ta.bin
-#    vendor/samsung/__DEVICE__/proprietary/lib/libgtalk_jni.so:system/lib/libgtalk_jni.so \\
-#    vendor/samsung/__DEVICE__/proprietary/lib/libspeech.so:system/lib/libspeech.so
+PRODUCT_COPY_FILES += \\
+    vendor/samsung/__DEVICE__/proprietary/tts/lang_pico/en-US_lh0_sg.bin:system/tts/lang_pico/en-US_lh0_sg.bin \\
+    vendor/samsung/__DEVICE__/proprietary/tts/lang_pico/en-US_ta.bin:system/tts/lang_pico/en-US_ta.bin \\
+    vendor/samsung/__DEVICE__/proprietary/tts/lang_pico/es-ES_zl0_sg.bin:system/tts/lang_pico/es-ES_zl0_sg.bin \\
+    vendor/samsung/__DEVICE__/proprietary/tts/lang_pico/es-ES_ta.bin:system/tts/lang_pico/es-ES_ta.bin \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libgtalk_jni.so:system/lib/libgtalk_jni.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libspeech.so:system/lib/libspeech.so
 
 #
 # Other stuff
@@ -432,15 +394,7 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libhardware.so:system/lib/libhardware.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libhardware_legacy.so:system/lib/libhardware_legacy.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libskiagl.so:system/lib/libskiagl.so
-#    vendor/samsung/__DEVICE__/proprietary/bin/BCM4329B1_002.002.023.0417.0464.hcd:system/bin/BCM4329B1_002.002.023.0417.0464.hcd \\
-
-#
-# Swype (cuz it works :P)
-#
-#PRODUCT_COPY_FILES += \\
-#    vendor/samsung/__DEVICE__/proprietary/app/Swype.apk:system/app/Swype.apk \\
-#    vendor/samsung/__DEVICE__/proprietary/lib/libSwypeCore.so:system/lib/SCH-I500/libSwypeCore.so \\
-#    vendor/samsung/__DEVICE__/proprietary/lib/libSwypeCore.so:system/lib/libSwypeCore.so
+    vendor/samsung/__DEVICE__/proprietary/bin/BCM4329B1_002.002.023.0417.0430.hcd:system/bin/BCM4329B1_002.002.023.0417.0430.hcd
 
 #
 # Files for battery charging screen
