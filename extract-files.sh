@@ -171,6 +171,9 @@ lib/hw/lights.s5pc110.so
 lib/hw/sensors.default.so
 lib/hw/gralloc.s5pc110.so
 
+lib/libImmVibeJ.so
+lib/libImmVibe.so
+
 tts/lang_pico/en-US_lh0_sg.bin
 tts/lang_pico/en-US_ta.bin
 tts/lang_pico/es-ES_zl0_sg.bin
@@ -391,6 +394,8 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/bin/btld:system/bin/btld \\
     vendor/samsung/__DEVICE__/proprietary/bin/dbus-daemon:system/bin/dbus-daemon \\
     vendor/samsung/__DEVICE__/proprietary/bin/immvibed:system/bin/immvibed \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libImmVibeJ.so:system/lib/libImmVibeJ.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libImmVibe.so:system/lib/libImmVibe.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libhardware.so:system/lib/libhardware.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libhardware_legacy.so:system/lib/libhardware_legacy.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libskiagl.so:system/lib/libskiagl.so
