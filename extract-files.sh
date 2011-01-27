@@ -152,6 +152,71 @@ lib/libomx_qcelpenc_sharedlibrary.so
 lib/libsoloomx_sharedlibrary.so
 lib/libsoloomx_wrapper_sharedlibrary.so
 
+lib/libomadrm.so
+lib/libomx_avcenc_sharedlibrary.so
+lib/libomx_m4venc_sharedlibrary.so
+lib/libopencore_2way.so
+lib/libsavidocn.so
+lib/libsavidreg.so
+lib/libsavsac.so
+lib/libsavscmn.so
+lib/libsavsff.so
+lib/libsavsvc.so
+lib/libSecOMXCore.so
+lib/libsflacfdocn.so
+lib/libsflacfdreg.so
+lib/libsflvdocn.so
+lib/libsflvdreg.so
+lib/libsmkvdocn.so
+lib/libsmkvdreg.so
+lib/libsolocore_androidpv.so
+lib/libsolocore_common.so
+lib/libsolocore_downloadreg.so
+lib/libsolocore_download.so
+lib/libsolocore_mp4localreg.so
+lib/libsolocore_mp4local.so
+lib/libsolocore_net_support.so
+lib/libsolocore_player.so
+lib/libsolocore_pvme.so
+lib/libsolocore_streamingreg.so
+lib/libsolocore_streaming.so
+lib/libsolohw.so
+lib/libsoloomx_sharedlibrary.so
+lib/libsoloomx_wmadec_sharedlibrary.so
+lib/libsoloomx_wmvdec_sharedlibrary.so
+lib/libsoloomx_wrapper_sharedlibrary.so
+lib/libsolopvasfcommon.so
+lib/libsolopvasflocalpbreg.so
+lib/libsolopvasflocalpb.so
+lib/libsolopvasxparser_extn.so
+lib/libsolopvdbconfigclass.so
+lib/libsolopvdb_recovery_utility.so
+lib/libsolopvdb.so
+lib/libsolopvdla_extn.so
+lib/libsolopvgetmetadata_extn.so
+lib/libsolopviptransport.so
+lib/libsolopvjanus.so
+lib/libsolopvmshttp_streamingreg.so
+lib/libsolopvmshttp_streaming.so
+lib/libsolopvmtpconfigclass.so
+lib/libsolopvmtpdrmmanagerplugin.so
+lib/libsolopvmtpip.so
+lib/libsolopvmtp_jni.so
+lib/libsolopvmtpservice.so
+lib/libsolopvmtp.so
+lib/libsolopvmtp_usb_transport.so
+lib/libsolopvplaybackcontrol_extn.so
+lib/libsolopvprotocolengine_asfstreamingreg.so
+lib/libsolopvprotocolengine_asfstreaming.so
+lib/libsolopvsetparameter_extn.so
+lib/libsolopvupnp.so
+lib/libsolopvwmdrm_jni.so
+lib/libsolopvwmdrmoemsettings.so
+lib/libsolopvwmdrmservice.so
+lib/libsolopvwmdrm.so
+lib/libswmfdocn.so
+lib/libswmfdreg.so
+
 lib/egl/libEGL_POWERVR_SGX540_120.so
 lib/egl/libGLES_android.so
 lib/egl/libGLESv1_CM_POWERVR_SGX540_120.so
@@ -367,7 +432,71 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libomx_evrcenc_sharedlibrary.so:system/lib/libomx_evrcenc_sharedlibrary.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libomx_qcelpdec_sharedlibrary.so:system/lib/libomx_qcelpdec_sharedlibrary.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libomx_qcelpenc_sharedlibrary.so:system/lib/libomx_qcelpenc_sharedlibrary.so \\
-    vendor/samsung/__DEVICE__/proprietary/bin/pv2way_omx_engine_test:system/bin/pv2way_omx_engine_test
+    vendor/samsung/__DEVICE__/proprietary/bin/pv2way_omx_engine_test:system/bin/pv2way_omx_engine_test \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libomadrm.so:system/lib/libomadrm.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libomx_avcenc_sharedlibrary.so:system/lib/libomx_avcenc_sharedlibrary.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libomx_m4venc_sharedlibrary.so:system/lib/libomx_m4venc_sharedlibrary.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libopencore_2way.so:system/lib/libopencore_2way.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsavidocn.so:system/lib/libsavidocn.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsavidreg.so:system/lib/libsavidreg.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsavsac.so:system/lib/libsavsac.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsavscmn.so:system/lib/libsavscmn.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsavsff.so:system/lib/libsavsff.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsavsvc.so:system/lib/libsavsvc.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libSecOMXCore.so:system/lib/libSecOMXCore.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsflacfdocn.so:system/lib/libsflacfdocn.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsflacfdreg.so:system/lib/libsflacfdreg.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsflvdocn.so:system/lib/libsflvdocn.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsflvdreg.so:system/lib/libsflvdreg.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsmkvdocn.so:system/lib/libsmkvdocn.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsmkvdreg.so:system/lib/libsmkvdreg.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolocore_androidpv.so:system/lib/libsolocore_androidpv.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolocore_common.so:system/lib/libsolocore_common.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolocore_downloadreg.so:system/lib/libsolocore_downloadreg.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolocore_download.so:system/lib/libsolocore_download.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolocore_mp4localreg.so:system/lib/libsolocore_mp4localreg.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolocore_mp4local.so:system/lib/libsolocore_mp4local.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolocore_net_support.so:system/lib/libsolocore_net_support.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolocore_player.so:system/lib/libsolocore_player.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolocore_pvme.so:system/lib/libsolocore_pvme.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolocore_streamingreg.so:system/lib/libsolocore_streamingreg.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolocore_streaming.so:system/lib/libsolocore_streaming.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolohw.so:system/lib/libsolohw.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsoloomx_sharedlibrary.so:system/lib/libsoloomx_sharedlibrary.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsoloomx_wmadec_sharedlibrary.so:system/lib/libsoloomx_wmadec_sharedlibrary.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsoloomx_wmvdec_sharedlibrary.so:system/lib/libsoloomx_wmvdec_sharedlibrary.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsoloomx_wrapper_sharedlibrary.so:system/lib/libsoloomx_wrapper_sharedlibrary.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvasfcommon.so:system/lib/libsolopvasfcommon.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvasflocalpbreg.so:system/lib/libsolopvasflocalpbreg.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvasflocalpb.so:system/lib/libsolopvasflocalpb.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvasxparser_extn.so:system/lib/libsolopvasxparser_extn.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvdbconfigclass.so:system/lib/libsolopvdbconfigclass.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvdb_recovery_utility.so:system/lib/libsolopvdb_recovery_utility.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvdb.so:system/lib/libsolopvdb.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvdla_extn.so:system/lib/libsolopvdla_extn.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvgetmetadata_extn.so:system/lib/libsolopvgetmetadata_extn.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopviptransport.so:system/lib/libsolopviptransport.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvjanus.so:system/lib/libsolopvjanus.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvmshttp_streamingreg.so:system/lib/libsolopvmshttp_streamingreg.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvmshttp_streaming.so:system/lib/libsolopvmshttp_streaming.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvmtpconfigclass.so:system/lib/libsolopvmtpconfigclass.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvmtpdrmmanagerplugin.so:system/lib/libsolopvmtpdrmmanagerplugin.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvmtpip.so:system/lib/libsolopvmtpip.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvmtp_jni.so:system/lib/libsolopvmtp_jni.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvmtpservice.so:system/lib/libsolopvmtpservice.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvmtp.so:system/lib/libsolopvmtp.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvmtp_usb_transport.so:system/lib/libsolopvmtp_usb_transport.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvplaybackcontrol_extn.so:system/lib/libsolopvplaybackcontrol_extn.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvprotocolengine_asfstreamingreg.so:system/lib/libsolopvprotocolengine_asfstreamingreg.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvprotocolengine_asfstreaming.so:system/lib/libsolopvprotocolengine_asfstreaming.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvsetparameter_extn.so:system/lib/libsolopvsetparameter_extn.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvupnp.so:system/lib/libsolopvupnp.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvwmdrm_jni.so:system/lib/libsolopvwmdrm_jni.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvwmdrmoemsettings.so:system/lib/libsolopvwmdrmoemsettings.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvwmdrmservice.so:system/lib/libsolopvwmdrmservice.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libsolopvwmdrm.so:system/lib/libsolopvwmdrm.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libswmfdocn.so:system/lib/libswmfdocn.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libswmfdreg.so:system/lib/libswmfdreg.so
 
 #
 # Audio
