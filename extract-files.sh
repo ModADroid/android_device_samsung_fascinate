@@ -71,7 +71,7 @@ bin/pv2way_omx_engine_test
 bin/hciattach
 bin/btld
 bin/dbus-daemon
-BCM4329B1_002.002.023.0417.0430.hcd
+bin/BCM4329B1_002.002.023.0417.0430.hcd
 
 cameradata/datapattern_420sp.yuv
 cameradata/datapattern_front_420sp.yuv
