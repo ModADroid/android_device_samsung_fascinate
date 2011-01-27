@@ -71,7 +71,7 @@ bin/pv2way_omx_engine_test
 bin/hciattach
 bin/btld
 bin/dbus-daemon
-bin/BCM4329B1_002.002.023.0417.0430.hcd
+BCM4329B1_002.002.023.0417.0430.hcd
 
 cameradata/datapattern_420sp.yuv
 cameradata/datapattern_front_420sp.yuv
@@ -216,6 +216,11 @@ lib/libsolopvwmdrmservice.so
 lib/libsolopvwmdrm.so
 lib/libswmfdocn.so
 lib/libswmfdreg.so
+
+libQmageDecoder.so
+libquramgifmovie.so
+libquramimagecodec.so
+libquramvdecoder.so
 
 lib/egl/libEGL_POWERVR_SGX540_120.so
 lib/egl/libGLES_android.so
@@ -496,7 +501,11 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsolopvwmdrmservice.so:system/lib/libsolopvwmdrmservice.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsolopvwmdrm.so:system/lib/libsolopvwmdrm.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libswmfdocn.so:system/lib/libswmfdocn.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libswmfdreg.so:system/lib/libswmfdreg.so
+    vendor/samsung/__DEVICE__/proprietary/lib/libswmfdreg.so:system/lib/libswmfdreg.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libQmageDecoder.so:system/lib/libQmageDecoder.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libquramgifmovie.so:system/lib/libquramgifmovie.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libquramimagecodec.so:system/lib/libquramimagecodec.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libquramvdecoder.so:system/lib/libquramvdecoder.so
 
 #
 # Audio
