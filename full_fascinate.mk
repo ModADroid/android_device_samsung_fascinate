@@ -133,6 +133,26 @@ PRODUCT_COPY_FILES += \
      device/samsung/fascinate/prebuilt/keychars/optjoy_device.kcm.bin:system/usr/keychars/optjoy_device.kcm.bin \
      device/samsung/fascinate/prebuilt/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin  
 
+# Dict stuff
+PRODUCT_COPY_FILES += \
+     device/samsung/fascinate/prebuilt/config/en.us/baseline.par:system/usr/config/en.us/baseline.par \
+     device/samsung/fascinate/prebuilt/config/en.us/baseline8k.par:system/usr/config/en.us/baseline8k.par \
+     device/samsung/fascinate/prebuilt/config/en.us/baseline11k.par:system/usr/config/en.us/baseline11k.par \
+     device/samsung/fascinate/prebuilt/config/en.us/dictionary/basic.ok:system/usr/config/en.us/dictionary/basic.ok \
+     device/samsung/fascinate/prebuilt/config/en.us/dictionary/cmu6plus.ok.zip:system/usr/config/en.us/dictionary/cmu6plus.ok.zip \
+     device/samsung/fascinate/prebuilt/config/en.us/dictionary/enroll.ok:system/usr/config/en.us/dictionary/enroll.ok \
+     device/samsung/fascinate/prebuilt/config/en.us/g2p/en-US-ttp.data:system/usr/config/en.us/g2p/en-US-ttp.data \
+     device/samsung/fascinate/prebuilt/config/en.us/grammars/boolean.g2g:system/usr/config/en.us/grammars/boolean.g2g \
+     device/samsung/fascinate/prebuilt/config/en.us/grammars/phone_type_choice.g2g:system/usr/config/en.us/grammars/phone_type_choice.g2g \
+     device/samsung/fascinate/prebuilt/config/en.us/grammars/VoiceDialer.g2g:system/usr/config/en.us/grammars/VoiceDialer.g2g \
+     device/samsung/fascinate/prebuilt/config/en.us/models/generic.swiarb:system/usr/config/en.us/models/generic.swiarb \
+     device/samsung/fascinate/prebuilt/config/en.us/models/generic8.lda:system/usr/config/en.us/models/generic8.lda \
+     device/samsung/fascinate/prebuilt/config/en.us/models/generic8_f.swimdl:system/usr/config/en.us/models/generic8_f.swimdl \
+     device/samsung/fascinate/prebuilt/config/en.us/models/generic8_m.swimdl:system/usr/config/en.us/models/generic8_m.swimdl \
+     device/samsung/fascinate/prebuilt/config/en.us/models/generic11.lda:system/usr/config/en.us/models/generic11.lda \
+     device/samsung/fascinate/prebuilt/config/en.us/models/generic11_f.swimdl:system/usr/config/en.us/models/generic11_f.swimdl \
+     device/samsung/fascinate/prebuilt/config/en.us/models/generic11_m.swimdl:system/usr/config/en.us/models/generic11_m.swimdl
+
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/samsung/fascinate/kernel
