@@ -146,9 +146,7 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
-
 $(call inherit-product, build/target/product/full.mk)
-
 
 PRODUCT_NAME := full_fascinate
 PRODUCT_DEVICE := fascinate
@@ -156,4 +154,6 @@ PRODUCT_MODEL := Fascinate
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung
 PRODUCT_POLICY := android.policy_phone
+
+PRODUCT_BUILD_PROP_OVERRIDES := PRODUCT_NAME=SCH-I500 PRODUCT_DEVICE=SCH-I500 PRODUCT_MODEL=SCH-I500 BUILD_FINGERPRINT=google/passion/passion/mahimahi:2.2.1/FRG83/60505:user/release-keys PRIVATE_BUILD_DESC="passion-user 2.2.1 FRG83 60505 release-keys"
 
