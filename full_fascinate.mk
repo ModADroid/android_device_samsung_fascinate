@@ -133,9 +133,6 @@ PRODUCT_COPY_FILES += \
      device/samsung/fascinate/prebuilt/keychars/optjoy_device.kcm.bin:system/usr/keychars/optjoy_device.kcm.bin \
      device/samsung/fascinate/prebuilt/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin  
 
-#PRODUCT_COPY_FILES += \
-#    device/samsung/fascinate/prebuilt/vold.fstab:system/etc/vold.fstab 
-
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/samsung/fascinate/kernel
@@ -156,4 +153,7 @@ PRODUCT_MANUFACTURER := Samsung
 PRODUCT_POLICY := android.policy_phone
 
 PRODUCT_BUILD_PROP_OVERRIDES := PRODUCT_NAME=SCH-I500 PRODUCT_DEVICE=SCH-I500 PRODUCT_MODEL=SCH-I500 BUILD_FINGERPRINT=google/passion/passion/mahimahi:2.2.1/FRG83/60505:user/release-keys PRIVATE_BUILD_DESC="passion-user 2.2.1 FRG83 60505 release-keys"
+
+PRODUCT_PROPERTY_OVERRIDES += \
+        ro.modversion=Vanilla_FroYo-$(shell date +%m%d-%R)
 
