@@ -217,10 +217,10 @@ lib/libsolopvwmdrm.so
 lib/libswmfdocn.so
 lib/libswmfdreg.so
 
-libQmageDecoder.so
-libquramgifmovie.so
-libquramimagecodec.so
-libquramvdecoder.so
+lib/libQmageDecoder.so
+lib/libquramgifmovie.so
+lib/libquramimagecodec.so
+lib/libquramvdecoder.so
 
 lib/egl/libEGL_POWERVR_SGX540_120.so
 lib/egl/libGLES_android.so
