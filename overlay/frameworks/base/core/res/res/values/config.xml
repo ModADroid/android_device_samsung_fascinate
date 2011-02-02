@@ -38,10 +38,10 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>200</item>
-        <item>400</item>
-        <item>1000</item>
-        <item>3000</item>
+        <item>30</item>
+        <item>2000</item>
+        <item>6000</item>
+        <item>11000</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -49,11 +49,11 @@
          than the size of the config_autoBrightnessLevels array.
     -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>25</item>
-        <item>55</item>
+        <item>32</item>
         <item>70</item>
-        <item>70</item>
-        <item>250</item>
+        <item>91</item>
+        <item>177</item>
+        <item>253</item>
     </integer-array>
 
     <!-- Array of output values for button backlight corresponding to the LUX values
@@ -61,8 +61,8 @@
          than the size of the config_autoBrightnessLevels array.
     -->
     <integer-array name="config_autoBrightnessButtonBacklightValues">
-        <item>255</item>
-        <item>255</item>
+        <item>0</item>
+        <item>0</item>
         <item>0</item>
         <item>0</item>
         <item>0</item>
@@ -74,11 +74,11 @@
          GalaxyS has no keyboard so all values are zero.
     -->
     <integer-array name="config_autoBrightnessKeyboardBacklightValues">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
+        <item>32</item>
+        <item>68</item>
+        <item>116</item>
+        <item>178</item>
+        <item>253</item>
     </integer-array>
     
     <!-- Component name of the default wallpaper. This will be ImageWallpaper if not 
