@@ -21,6 +21,7 @@
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
 
+TARGET_IS_GALAXYS := true
 #USE_CAMERA_STUB := true
 BOARD_USES_NEXUS_S_LIBS := true
 BOARD_USES_NEXUS_S_AUDIO := true
