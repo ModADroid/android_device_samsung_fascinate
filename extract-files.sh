@@ -86,6 +86,7 @@ etc/ppp/pap-secrets
 etc/init.cdma-pppd
 etc/init.gprs-pppd
 etc/vold.conf
+etc/vold.fstab
 etc/wifi/nvram_net.txt
 etc/wifi/nvram_mfg.txt
 etc/wifi/bcm4329_aps.bin
@@ -534,9 +535,11 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libImmVibe.so:system/lib/libImmVibe.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libhardware.so:system/lib/libhardware.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libhardware_legacy.so:system/lib/libhardware_legacy.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libskiagl.so:system/lib/libskiagl.so
-    vendor/samsung/__DEVICE__/proprietary/bin/BCM4329B1_002.002.023.0417.0430.hcd:system/bin/BCM4329B1_002.002.023.0417.0430.hcd
-
+    vendor/samsung/__DEVICE__/proprietary/lib/libskiagl.so:system/lib/libskiagl.so \\
+    vendor/samsung/__DEVICE__/proprietary/bin/BCM4329B1_002.002.023.0417.0430.hcd:system/bin/BCM4329B1_002.002.023.0417.0430.hcd \\
+    vendor/samsung/__DEVICE__/proprietary/bin/vold:system/bin/vold \\
+    vendor/samsung/__DEVICE__/proprietary/etc/vold.conf:system/etc/vold.conf \\
+    vendor/samsung/__DEVICE__/proprietary/etc/vold.fstab:system/etc/vold.fstab
 #
 # Files for battery charging screen
 #

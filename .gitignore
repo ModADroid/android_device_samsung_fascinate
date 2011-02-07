@@ -1,4 +1,5 @@
 proprietary/
+tmp/
 *.db
 *.rar
 *.zip
