@@ -527,9 +527,6 @@ PRODUCT_COPY_FILES += \\
 # Other stuff
 #
 PRODUCT_COPY_FILES += \\
-    vendor/samsung/__DEVICE__/proprietary/bin/hciattach:system/bin/hciattach \\
-    vendor/samsung/__DEVICE__/proprietary/bin/btld:system/bin/btld \\
-    vendor/samsung/__DEVICE__/proprietary/bin/dbus-daemon:system/bin/dbus-daemon \\
     vendor/samsung/__DEVICE__/proprietary/bin/immvibed:system/bin/immvibed \\
     vendor/samsung/__DEVICE__/proprietary/lib/libImmVibeJ.so:system/lib/libImmVibeJ.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libImmVibe.so:system/lib/libImmVibe.so \\
@@ -540,6 +537,10 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/bin/vold:system/bin/vold \\
     vendor/samsung/__DEVICE__/proprietary/etc/vold.conf:system/etc/vold.conf \\
     vendor/samsung/__DEVICE__/proprietary/etc/vold.fstab:system/etc/vold.fstab
+#    vendor/samsung/__DEVICE__/proprietary/bin/hciattach:system/bin/hciattach \\
+#    vendor/samsung/__DEVICE__/proprietary/bin/btld:system/bin/btld \\
+#    vendor/samsung/__DEVICE__/proprietary/bin/dbus-daemon:system/bin/dbus-daemon \\
+
 #
 # Files for battery charging screen
 #
