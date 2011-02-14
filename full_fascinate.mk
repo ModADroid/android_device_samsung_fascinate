@@ -92,6 +92,16 @@ $(call inherit-product, device/samsung/fascinate/media_a1026.mk)
 PRODUCT_COPY_FILES += \
     device/samsung/fascinate/media_profiles.xml:system/etc/media_profiles.xml
 
+# gps stuff from DJ05
+PRODUCT_COPY_FILES += \
+    device/samsung/fascinate/prebuilt/gps.conf:system/etc/gps.conf \
+    device/samsung/fascinate/prebuilt/libgps.so:system/lib/libgps.so \
+    device/samsung/fascinate/prebuilt/libsecgps.so:system/lib/libsecgps.so \
+    device/samsung/fascinate/prebuilt/libgps.so:obj/lib/libgps.so \
+    device/samsung/fascinate/prebuilt/libsecgps.so:obj/lib/libsecgps.so \
+    device/samsung/fascinate/prebuilt/glgps_samsungJupiter:system/bin/gpsd/glgps_samsungJupiter \
+    device/samsung/fascinate/prebuilt/jupiter.xml:system/etc/jupiter.xml
+
 # asound.conf
 PRODUCT_COPY_FILES += \
     device/samsung/fascinate/prebuilt/asound.conf:system/etc/asound.conf
@@ -135,7 +145,6 @@ PRODUCT_COPY_FILES += \
      device/samsung/fascinate/prebuilt/config/en.us/baseline8k.par:system/usr/config/en.us/baseline8k.par \
      device/samsung/fascinate/prebuilt/config/en.us/baseline11k.par:system/usr/config/en.us/baseline11k.par \
      device/samsung/fascinate/prebuilt/config/en.us/dictionary/basic.ok:system/usr/config/en.us/dictionary/basic.ok \
-     device/samsung/fascinate/prebuilt/config/en.us/dictionary/cmu6plus.ok.zip:system/usr/config/en.us/dictionary/cmu6plus.ok.zip \
      device/samsung/fascinate/prebuilt/config/en.us/dictionary/enroll.ok:system/usr/config/en.us/dictionary/enroll.ok \
      device/samsung/fascinate/prebuilt/config/en.us/g2p/en-US-ttp.data:system/usr/config/en.us/g2p/en-US-ttp.data \
      device/samsung/fascinate/prebuilt/config/en.us/grammars/boolean.g2g:system/usr/config/en.us/grammars/boolean.g2g \
@@ -148,6 +157,7 @@ PRODUCT_COPY_FILES += \
      device/samsung/fascinate/prebuilt/config/en.us/models/generic11.lda:system/usr/config/en.us/models/generic11.lda \
      device/samsung/fascinate/prebuilt/config/en.us/models/generic11_f.swimdl:system/usr/config/en.us/models/generic11_f.swimdl \
      device/samsung/fascinate/prebuilt/config/en.us/models/generic11_m.swimdl:system/usr/config/en.us/models/generic11_m.swimdl
+#     device/samsung/fascinate/prebuilt/config/en.us/dictionary/cmu6plus.ok.zip:system/usr/config/en.us/dictionary/cmu6plus.ok.zip
 
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
