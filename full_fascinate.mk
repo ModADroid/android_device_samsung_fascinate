@@ -104,6 +104,7 @@ PRODUCT_COPY_FILES += \
 
 # other stuffs
 PRODUCT_COPY_FILES += \
+    device/samsung/fascinate/prebuilt/app/FlashPlayer.apk:system/app/FlashPlayer.apk \
     device/samsung/fascinate/prebuilt/etc/terminfo/l/linux:system/etc/terminfo/l/linux \
     device/samsung/fascinate/prebuilt/etc/terminfo/u/unknown:system/etc/terminfo/u/linux \
     device/samsung/fascinate/prebuilt/xbin/redbend_ua:system/xbin/redbend_ua \
