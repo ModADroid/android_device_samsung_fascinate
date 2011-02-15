@@ -102,6 +102,12 @@ PRODUCT_COPY_FILES += \
     device/samsung/fascinate/prebuilt/bin/gpsd/glgps_samsungJupiter:system/bin/gpsd/glgps_samsungJupiter \
     device/samsung/fascinate/prebuilt/etc/jupiter.xml:system/etc/jupiter.xml
 
+# other stuffs
+PRODUCT_COPY_FILES += \
+    device/samsung/fascinate/prebuilt/xbin/redbend_ua:system/xbin/redbend_ua \
+    device/samsung/fascinate/prebuilt/etc/terminfo/l/linux:system/etc/terminfo/l/linux \
+    device/samsung/fascinate/prebuilt/etc/terminfo/u/unknown:system/etc/terminfo/u/linux
+
 # Swype
 PRODUCT_COPY_FILES += \
     device/samsung/fascinate/prebuilt/app/Swype.apk:system/app/Swype.apk \
