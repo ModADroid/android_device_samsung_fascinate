@@ -200,7 +200,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
         ro.modversion=Vanilla_FroYo-$(shell date +%m%d-%R)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-	dalvik.vm.execution-mode=int:jit \
-	ro.kernel.android.checkjni=0
-
+	dalvik.vm.execution-mode=int:jit
 
