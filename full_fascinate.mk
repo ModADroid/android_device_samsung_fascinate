@@ -94,13 +94,18 @@ PRODUCT_COPY_FILES += \
 
 # gps stuff from DJ05
 PRODUCT_COPY_FILES += \
-    device/samsung/fascinate/prebuilt/gps.conf:system/etc/gps.conf \
-    device/samsung/fascinate/prebuilt/libgps.so:system/lib/libgps.so \
-    device/samsung/fascinate/prebuilt/libsecgps.so:system/lib/libsecgps.so \
-    device/samsung/fascinate/prebuilt/libgps.so:obj/lib/libgps.so \
-    device/samsung/fascinate/prebuilt/libsecgps.so:obj/lib/libsecgps.so \
-    device/samsung/fascinate/prebuilt/glgps_samsungJupiter:system/bin/gpsd/glgps_samsungJupiter \
-    device/samsung/fascinate/prebuilt/jupiter.xml:system/etc/jupiter.xml
+    device/samsung/fascinate/prebuilt/etc/gps.conf:system/etc/gps.conf \
+    device/samsung/fascinate/prebuilt/lib/libgps.so:system/lib/libgps.so \
+    device/samsung/fascinate/prebuilt/lib/libsecgps.so:system/lib/libsecgps.so \
+    device/samsung/fascinate/prebuilt/lib/libgps.so:obj/lib/libgps.so \
+    device/samsung/fascinate/prebuilt/lib/libsecgps.so:obj/lib/libsecgps.so \
+    device/samsung/fascinate/prebuilt/bin/gpsd/glgps_samsungJupiter:system/bin/gpsd/glgps_samsungJupiter \
+    device/samsung/fascinate/prebuilt/etc/jupiter.xml:system/etc/jupiter.xml
+
+# Swype
+PRODUCT_COPY_FILES += \
+    device/samsung/fascinate/prebuilt/app/Swype.apk:system/app/Swype.apk \
+    device/samsung/fascinate/prebuilt/lib/libSwypeCore.so:system/lib/libSwypeCore.so
 
 # asound.conf
 PRODUCT_COPY_FILES += \

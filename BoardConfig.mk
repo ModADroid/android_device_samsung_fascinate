@@ -67,7 +67,7 @@ BRCM_BTL_INCLUDE_A2DP := true
 BRCM_BT_USE_BTL_IF := true
 WITH_A2DP := true
 
-BOARD_EGL_CFG := device/samsung/fascinate/prebuilt/egl.cfg
+BOARD_EGL_CFG := device/samsung/fascinate/prebuilt/lib/egl/egl.cfg
 
 # Device related defines
 
