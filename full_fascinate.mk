@@ -104,9 +104,13 @@ PRODUCT_COPY_FILES += \
 
 # other stuffs
 PRODUCT_COPY_FILES += \
-    device/samsung/fascinate/prebuilt/xbin/redbend_ua:system/xbin/redbend_ua \
     device/samsung/fascinate/prebuilt/etc/terminfo/l/linux:system/etc/terminfo/l/linux \
-    device/samsung/fascinate/prebuilt/etc/terminfo/u/unknown:system/etc/terminfo/u/linux
+    device/samsung/fascinate/prebuilt/etc/terminfo/u/unknown:system/etc/terminfo/u/linux \
+    device/samsung/fascinate/prebuilt/xbin/redbend_ua:system/xbin/redbend_ua \
+    device/samsung/fascinate/prebuilt/xbin/strace:system/xbin/strace \
+    device/samsung/fascinate/prebuilt/xbin/bmlunlock:system/xbin/bmlunlock \
+    device/samsung/fascinate/prebuilt/xbin/rw:system/xbin/rw \
+    device/samsung/fascinate/prebuilt/xbin/ro:system/xbin/ro
 
 # Swype
 PRODUCT_COPY_FILES += \

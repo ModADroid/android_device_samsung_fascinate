@@ -1,0 +1,4 @@
+#!/system/bin/sh
+fs=`mount | grep system | awk '{print $5}'`
+mount -t $fs -o remount,rw /dev/block/stl9 /system
+
