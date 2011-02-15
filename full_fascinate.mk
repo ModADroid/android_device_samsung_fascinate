@@ -87,7 +87,10 @@ PRODUCT_LOCALES := hdpi
 DEVICE_PACKAGE_OVERLAYS += device/samsung/fascinate/overlay
 
 # media profiles and capabilities spec
-$(call inherit-product, device/samsung/fascinate/media_a1026.mk)
+PRODUCT_PROPERTY_OVERRIDES += \
+      media.a1026.nsForVoiceRec            = 0 \
+      media.a1026.enableA1026              = 1
+
 # media config xml file
 PRODUCT_COPY_FILES += \
     device/samsung/fascinate/media_profiles.xml:system/etc/media_profiles.xml
