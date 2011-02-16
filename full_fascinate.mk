@@ -18,7 +18,6 @@
 # This is the product configuration for a generic GSM passion,
 # not specialized for any geography.
 #
-$(call inherit-product, device/samsung/common/galaxys.mk)
 
 # use libs from nexus s
 $(call inherit-product, device/samsung/common/galaxys.mk)
@@ -46,13 +45,25 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 #verizon cdma stuff
 PRODUCT_PROPERTY_OVERRIDES += \
+	ro.com.android.wifi-watchlist=GoogleGuest \
+	ro.error.receiver.system.apps=com.google.android.feedback \
+	ro.setupwizard.enterprise_mode=1 \
 	ro.com.google.clientidbase=android-verizon \
 	ro.com.google.clientidbase.yt=android-verizon \
 	ro.com.google.clientidbase.am=android-verizon \
 	ro.com.google.clientidbase.vs=android-verizon \
 	ro.com.google.clientidbase.gmm=android-verizon \
+	ro.com.google.locationfeatures=1 \
+	ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
+	ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
 	ro.cdma.home.operator.numeric=310004 \
 	ro.cdma.home.operator.alpha=Verizon \
+	ro.cdma.homesystem=64,65,76,77,78,79,80,81,82,83 \
+	ro.cdma.data_retry_config=default_randomization=2000,0,0,120000,180000,540000,960000 \
+	ro.config.vc_call_vol_steps=7 \
+	ro.cdma.otaspnumschema=SELC,1,80,99 \
+	ro.telephony.call_ring.multiple=false \
+	ro.telephony.call_ring.delay=3000 \
   	net.cdma.pppd.authtype=require-chap \
 	net.cdma.pppd.user=user[SPACE]VerizonWireless \
 	net.cdma.datalinkinterface=/dev/ttyCDMA0 \
@@ -67,8 +78,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.csc.sales_code=VZW \
 	ril.sales_code=VZW \
 	ro.carrier=Verizon \
-	net.dns1=8.8.8.8 \
-	net.dns2=8.8.4.4 \
 	mobiledata.interfaces=eth0,ppp0
 
 # we have enough storage space to hold precise GC data
@@ -114,10 +123,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/fascinate/prebuilt/xbin/strace:system/xbin/strace \
     device/samsung/fascinate/prebuilt/xbin/bmlunlock:system/xbin/bmlunlock \
     device/samsung/fascinate/prebuilt/xbin/rw:system/xbin/rw \
-    device/samsung/fascinate/prebuilt/xbin/ro:system/xbin/ro
-
-# Swype
-PRODUCT_COPY_FILES += \
+    device/samsung/fascinate/prebuilt/xbin/ro:system/xbin/ro \
     device/samsung/fascinate/prebuilt/app/Swype.apk:system/app/Swype.apk \
     device/samsung/fascinate/prebuilt/lib/libSwypeCore.so:system/lib/libSwypeCore.so
 
@@ -160,23 +166,7 @@ PRODUCT_COPY_FILES += \
 
 # Dict stuff
 PRODUCT_COPY_FILES += \
-     device/samsung/fascinate/prebuilt/config/en.us/baseline.par:system/usr/config/en.us/baseline.par \
-     device/samsung/fascinate/prebuilt/config/en.us/baseline8k.par:system/usr/config/en.us/baseline8k.par \
-     device/samsung/fascinate/prebuilt/config/en.us/baseline11k.par:system/usr/config/en.us/baseline11k.par \
-     device/samsung/fascinate/prebuilt/config/en.us/dictionary/basic.ok:system/usr/config/en.us/dictionary/basic.ok \
-     device/samsung/fascinate/prebuilt/config/en.us/dictionary/enroll.ok:system/usr/config/en.us/dictionary/enroll.ok \
-     device/samsung/fascinate/prebuilt/config/en.us/g2p/en-US-ttp.data:system/usr/config/en.us/g2p/en-US-ttp.data \
-     device/samsung/fascinate/prebuilt/config/en.us/grammars/boolean.g2g:system/usr/config/en.us/grammars/boolean.g2g \
-     device/samsung/fascinate/prebuilt/config/en.us/grammars/phone_type_choice.g2g:system/usr/config/en.us/grammars/phone_type_choice.g2g \
-     device/samsung/fascinate/prebuilt/config/en.us/grammars/VoiceDialer.g2g:system/usr/config/en.us/grammars/VoiceDialer.g2g \
-     device/samsung/fascinate/prebuilt/config/en.us/models/generic.swiarb:system/usr/config/en.us/models/generic.swiarb \
-     device/samsung/fascinate/prebuilt/config/en.us/models/generic8.lda:system/usr/config/en.us/models/generic8.lda \
-     device/samsung/fascinate/prebuilt/config/en.us/models/generic8_f.swimdl:system/usr/config/en.us/models/generic8_f.swimdl \
-     device/samsung/fascinate/prebuilt/config/en.us/models/generic8_m.swimdl:system/usr/config/en.us/models/generic8_m.swimdl \
-     device/samsung/fascinate/prebuilt/config/en.us/models/generic11.lda:system/usr/config/en.us/models/generic11.lda \
-     device/samsung/fascinate/prebuilt/config/en.us/models/generic11_f.swimdl:system/usr/config/en.us/models/generic11_f.swimdl \
-     device/samsung/fascinate/prebuilt/config/en.us/models/generic11_m.swimdl:system/usr/config/en.us/models/generic11_m.swimdl
-#     device/samsung/fascinate/prebuilt/config/en.us/dictionary/cmu6plus.ok.zip:system/usr/config/en.us/dictionary/cmu6plus.ok.zip
+
 
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
@@ -192,7 +182,7 @@ $(call inherit-product, build/target/product/full.mk)
 
 PRODUCT_NAME := full_fascinate
 PRODUCT_DEVICE := fascinate
-PRODUCT_MODEL := Fascinate
+PRODUCT_MODEL := fascinate
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung
 PRODUCT_POLICY := android.policy_phone
