@@ -29,7 +29,7 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 ## (1) First, the most specific values, i.e. the aspects that are specific to GSM
 PRODUCT_COPY_FILES += \
-    device/samsung/fascinate/apns-conf.xml:system/etc/apns-conf.xml
+    device/samsung/fascinate/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 ## (2) Also get non-open-source GSM-specific aspects if available
 $(call inherit-product-if-exists, vendor/samsung/fascinate/fascinate-vendor.mk)
@@ -102,7 +102,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # media config xml file
 PRODUCT_COPY_FILES += \
-    device/samsung/fascinate/media_profiles.xml:system/etc/media_profiles.xml
+    device/samsung/fascinate/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml
 
 # gps stuff from DJ05
 PRODUCT_COPY_FILES += \
@@ -129,7 +129,7 @@ PRODUCT_COPY_FILES += \
 
 # asound.conf
 PRODUCT_COPY_FILES += \
-    device/samsung/fascinate/prebuilt/asound.conf:system/etc/asound.conf
+    device/samsung/fascinate/prebuilt/etc/asound.conf:system/etc/asound.conf
 
 # Install the features available on this device.
 PRODUCT_COPY_FILES += \
@@ -163,10 +163,6 @@ PRODUCT_COPY_FILES += \
      device/samsung/fascinate/prebuilt/keychars/melfas_ts_input.kcm.bin:system/usr/keychars/melfas_ts_input.kcm.bin \
      device/samsung/fascinate/prebuilt/keychars/optjoy_device.kcm.bin:system/usr/keychars/optjoy_device.kcm.bin \
      device/samsung/fascinate/prebuilt/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin  
-
-# Dict stuff
-PRODUCT_COPY_FILES += \
-
 
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)

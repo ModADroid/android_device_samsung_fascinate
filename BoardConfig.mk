@@ -22,12 +22,10 @@
 # against the traditional rules of inheritance).
 
 TARGET_IS_GALAXYS := true
-#USE_CAMERA_STUB := true
 BOARD_USES_NEXUS_S_LIBS := true
 BOARD_USES_NEXUS_S_AUDIO := true
 BOARD_USES_FROYO := true
-#BOARD_CAMERA_LIBRARIES := libcamera
-BOARD_USES_OVERLAY := true
+BOARD_USES_COPYBIT := true
 
 # inherit from the proprietary version
 -include vendor/samsung/fascinate/BoardConfigVendor.mk

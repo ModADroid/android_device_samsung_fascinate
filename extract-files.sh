@@ -274,6 +274,7 @@ media/battery_charging_85.qmg
 media/battery_charging_90.qmg
 media/battery_charging_95.qmg
 media/battery_charging_100.qmg
+media/batteryerror.qmg
 media/chargingwarning.qmg
 media/Disconnected.qmg
 "
@@ -354,6 +355,7 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/bin/sensorcalibutil_yamaha:system/bin/sensorcalibutil_yamaha \\
     vendor/samsung/__DEVICE__/proprietary/bin/sensorserver_yamaha:system/bin/sensorserver_yamaha \\
     vendor/samsung/__DEVICE__/proprietary/bin/sensorstatutil_yamaha:system/bin/sensorstatutil_yamaha
+#    vendor/samsung/__DEVICE__/proprietary/lib/hw/copybit.s5pc110.so:system/lib/hw/copybit.s5pc110.so
 
 #
 # Camera
@@ -373,7 +375,6 @@ PRODUCT_COPY_FILES += \\
 PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsec-ril40.so:system/lib/libsec-ril40.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsecril-client.so:system/lib/libsecril-client.so \\
-    vendor/samsung/__DEVICE__/proprietary/etc/apns-conf.xml:system/etc/apns-conf.xml \\
     vendor/samsung/__DEVICE__/proprietary/etc/cdma-carriers-conf.xml:system/etc/cdma-carriers-conf.xml \\
     vendor/samsung/__DEVICE__/proprietary/xbin/ipctool:system/xbin/ipctool \\
     vendor/samsung/__DEVICE__/proprietary/bin/dhcpcd:system/bin/dhcpcd \\
@@ -499,12 +500,6 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libquramvdecoder.so:system/lib/libquramvdecoder.so
 
 #
-# Audio
-#
-PRODUCT_COPY_FILES += \\
-    vendor/samsung/__DEVICE__/proprietary/etc/asound.conf:system/etc/asound.conf
-
-#
 # Voice Search
 #
 PRODUCT_COPY_FILES += \\
@@ -527,9 +522,6 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/bin/vold:system/bin/vold \\
     vendor/samsung/__DEVICE__/proprietary/etc/vold.conf:system/etc/vold.conf \\
     vendor/samsung/__DEVICE__/proprietary/etc/vold.fstab:system/etc/vold.fstab
-#    vendor/samsung/__DEVICE__/proprietary/bin/hciattach:system/bin/hciattach \\
-#    vendor/samsung/__DEVICE__/proprietary/bin/btld:system/bin/btld \\
-#    vendor/samsung/__DEVICE__/proprietary/bin/dbus-daemon:system/bin/dbus-daemon \\
 
 #
 # Files for battery charging screen
@@ -557,6 +549,7 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/media/battery_charging_90.qmg:system/media/battery_charging_90.qmg \\
     vendor/samsung/__DEVICE__/proprietary/media/battery_charging_95.qmg:system/media/battery_charging_95.qmg \\
     vendor/samsung/__DEVICE__/proprietary/media/battery_charging_100.qmg:system/media/battery_charging_100.qmg \\
+    vendor/samsung/__DEVICE__/proprietary/media/batteryerror.qmg:system/media/batteryerror.qmg \\
     vendor/samsung/__DEVICE__/proprietary/media/chargingwarning.qmg:system/media/chargingwarning.qmg \\
     vendor/samsung/__DEVICE__/proprietary/media/Disconnected.qmg:system/media/Disconnected.qmg
 
