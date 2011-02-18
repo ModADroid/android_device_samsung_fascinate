@@ -186,7 +186,7 @@ PRODUCT_POLICY := android.policy_phone
 PRODUCT_BUILD_PROP_OVERRIDES := PRODUCT_NAME=SCH-I500 TARGET_DEVICE=SCH-I500 PRODUCT_MODEL=SCH-I500 PRODUCT_BRAND=verizon BUILD_FINGERPRINT=google/passion/passion/mahimahi:2.2.1/FRG83/60505:user/release-keys PRIVATE_BUILD_DESC="passion-user 2.2.1 FRG83 60505 release-keys"
 
 PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=Vanilla_FroYo-$(shell date +%m%d-%R)
+        ro.modversion=Vanilla_FroYo-v0.8
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	dalvik.vm.execution-mode=int:jit
