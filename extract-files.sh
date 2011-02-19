@@ -16,7 +16,7 @@
 
 DEVICE=fascinate
 
-rm -rf ../../../vendor/samsung/$DEVICE
+rm -rf ../../../vendor/samsung/$DEVICE/*
 mkdir -p ../../../vendor/samsung/$DEVICE/proprietary
 
 if [ -f "$1" ]; then
