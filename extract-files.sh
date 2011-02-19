@@ -233,6 +233,7 @@ lib/libIMGegl.so
 lib/libpvr2d.so
 lib/libpvrANDROID_WSEGL.so
 lib/libglslcompiler.so
+lib/libPVRScopeServices.so
 
 lib/libsensor_yamaha.so
 lib/libsensor_yamaha_test.so
@@ -340,7 +341,8 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libIMGegl.so:system/lib/libIMGegl.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libpvr2d.so:system/lib/libpvr2d.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libpvrANDROID_WSEGL.so:system/lib/libpvrANDROID_WSEGL.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libglslcompiler.so:system/lib/libglslcompiler.so
+    vendor/samsung/__DEVICE__/proprietary/lib/libglslcompiler.so:system/lib/libglslcompiler.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libPVRScopeServices.so:system/lib/libPVRScopeServices.so
 
 #
 # Sensors, Lights etc
