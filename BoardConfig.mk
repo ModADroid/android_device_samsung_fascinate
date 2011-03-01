@@ -26,6 +26,8 @@ BOARD_USES_NEXUS_S_LIBS := true
 BOARD_USES_NEXUS_S_AUDIO := true
 BOARD_USES_OVERLAY := true
 BOARD_USES_FROYO := true
+BOARD_OVERLAY_FORMAT_YCbCr_420_SP := true
+BOARD_UMS_LUNFILE := "/sys/devices/platform/s3c-usbgadget/gadget/lun0/file"
 
 # inherit from the proprietary version
 -include vendor/samsung/fascinate/BoardConfigVendor.mk
@@ -64,6 +66,8 @@ BT_ALT_STACK := true
 BRCM_BTL_INCLUDE_A2DP := true
 BRCM_BT_USE_BTL_IF := true
 WITH_A2DP := true
+BRCM_BTL_INCLUDE_OBEX := true
+BRCM_BTL_OBEX_USE_DBUS := true
 
 BOARD_EGL_CFG := device/samsung/fascinate/prebuilt/lib/egl/egl.cfg
 
