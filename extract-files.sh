@@ -120,7 +120,6 @@ lib/libseccamera.so
 lib/libs3cjpeg.so
 lib/libskiagl.so
 
-lib/libhardware.so
 lib/libhardware_legacy.so
 
 lib/libs263domxoc.so
