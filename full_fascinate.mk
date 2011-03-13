@@ -124,9 +124,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/fascinate/prebuilt/xbin/strace:system/xbin/strace \
     device/samsung/fascinate/prebuilt/xbin/bmlunlock:system/xbin/bmlunlock \
     device/samsung/fascinate/prebuilt/xbin/rw:system/xbin/rw \
-    device/samsung/fascinate/prebuilt/xbin/ro:system/xbin/ro \
-    device/samsung/fascinate/prebuilt/app/Swype.apk:system/app/Swype.apk \
-    device/samsung/fascinate/prebuilt/lib/libSwypeCore.so:system/lib/libSwypeCore.so
+    device/samsung/fascinate/prebuilt/xbin/ro:system/xbin/ro
 
 # asound.conf
 PRODUCT_COPY_FILES += \
@@ -181,7 +179,7 @@ PRODUCT_POLICY := android.policy_phone
 PRODUCT_BUILD_PROP_OVERRIDES := BUILD_ID=FROYO BUILD_DISPLAY_ID=FROYO.EB01 PRODUCT_NAME=SCH-I500 TARGET_DEVICE=SCH-I500 PRODUCT_MODEL=SCH-I500 PRODUCT_BRAND=verizon BUILD_FINGERPRINT=verizon/SCH-I500/SCH-I500/SCH-I500:2.2.1/FROYO/EB01:user/release-keys PRIVATE_BUILD_DESC="SCH-I500-user 2.2.1 FROYO EB01 release-keys"
 
 PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=Vanilla_FroYo-v0.8.1
+        ro.modversion=Vanilla_FroYo-v0.9
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	dalvik.vm.execution-mode=int:jit
