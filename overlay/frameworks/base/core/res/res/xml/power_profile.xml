@@ -18,32 +18,36 @@
 -->
 
 <device name="Android">
-  <item name="none">0</item>
-  <item name="screen.on">30</item>
-  <item name="bluetooth.active">0.4</item> <!-- In call -->
-  <item name="bluetooth.on">0.8</item>
-  <!-- CPU wakelock held for 830ms on bluetooth headset at command. 43mA * 830 -->
-  <item name="bluetooth.at">35690</item>
-  <item name="screen.full">50</item>
-  <item name="wifi.on">0.2</item>
-  <item name="wifi.active">0.1</item>
-  <item name="wifi.scan">0.1</item>
-  <item name="dsp.audio">74</item>
-  <item name="dsp.video">243</item>
-  <item name="radio.active">200</item>
-  <item name="gps.on">70</item>
-  <item name="radio.scanning">30</item>
-  <array name="radio.on"> <!-- Strength 0 to BINS-1 -->
-      <value>3</value>
-      <value>2</value>
-  </array>
-  <array name="cpu.speeds">
-    <value>1000000</value>
-  </array>
-  <!-- Power consumption in suspend -->
-  <item name="cpu.idle">1.5</item>
-  <!-- Power consumption at different speeds -->
-  <array name="cpu.active">
-      <value>20</value>
-  </array>
+    <item name="none">0</item>
+    <item name="screen.on">112</item>
+    <item name="bluetooth.active">32</item>
+    <item name="bluetooth.on">0.3</item>
+    <item name="screen.full">845</item>
+    <item name="wifi.on">5</item>
+    <item name="wifi.active">84</item>
+    <item name="wifi.scan">172</item>
+    <item name="dsp.audio">80</item>
+    <item name="dsp.video">612</item>
+    <item name="radio.active">183</item>
+    <item name="radio.scanning">45</item>
+    <item name="gps.on">24</item>
+    <array name="radio.on">
+        <value>3</value>
+        <value>3</value>
+    </array>
+    <array name="cpu.speeds">
+        <value>1000000</value>
+        <value>800000</value>
+        <value>400000</value>
+        <value>200000</value>
+        <value>100000</value>
+    </array>
+    <item name="cpu.idle">1.5</item>
+    <array name="cpu.active">
+        <value>150</value>
+        <value>142</value>
+        <value>138</value>
+        <value>134</value>
+        <value>112</value>
+    </array>
 </device>
