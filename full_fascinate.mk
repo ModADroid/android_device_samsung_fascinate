@@ -40,7 +40,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/lib/libsec-ril40.so \
     rild.libargs=-d[SPACE]/dev/ttyS0 \
     wifi.interface=eth0 \
-    wifi.supplicant_scan_interval=15 \
+    wifi.supplicant_scan_interval=120 \
     ro.wifi.channels=11
 
 #verizon cdma stuff
@@ -61,7 +61,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.cdma.homesystem=64,65,76,77,78,79,80,81,82,83 \
 	net.dns1=8.8.8.8 \
 	net.dns2=8.8.4.4 \
-	ro.config.vc_call_vol_steps=7 \
+	ro.config.vc_call_vol_steps=15 \
 	ro.cdma.otaspnumschema=SELC,1,80,99 \
 	ro.telephony.call_ring.multiple=false \
 	ro.telephony.call_ring.delay=3000 \
