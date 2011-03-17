@@ -25,6 +25,7 @@ TARGET_IS_GALAXYS := true
 BOARD_USES_NEXUS_S_LIBS := true
 BOARD_USES_NEXUS_S_AUDIO := true
 BOARD_USES_OVERLAY := true
+BOARD_USES_COPYBIT := true
 BOARD_USES_FROYO := true
 BOARD_OVERLAY_FORMAT_YCbCr_420_SP := true
 BOARD_UMS_LUNFILE := "/sys/devices/platform/s3c-usbgadget/gadget/lun0/file"
