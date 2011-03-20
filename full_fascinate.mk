@@ -41,7 +41,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     rild.libargs=-d[SPACE]/dev/ttyS0 \
     wifi.interface=eth0 \
     wifi.supplicant_scan_interval=120 \
-    ro.wifi.channels=11
+    ro.wifi.channels=11 \
+    ro.opengles.version=131072
 
 #verizon cdma stuff
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -59,6 +60,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.cdma.home.operator.numeric=310004 \
 	ro.cdma.home.operator.alpha=Verizon \
 	ro.cdma.homesystem=64,65,76,77,78,79,80,81,82,83 \
+	ro.cdma.data_retry_config=default_randomization=2000,0,0,120000,180000,540000,960000 \
 	net.dns1=8.8.8.8 \
 	net.dns2=8.8.4.4 \
 	ro.config.vc_call_vol_steps=15 \
@@ -134,15 +136,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     frameworks/base/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
-    frameworks/base/data/etc/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml \
     frameworks/base/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/base/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
     frameworks/base/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
     frameworks/base/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
-    frameworks/base/data/etc/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml \
-    frameworks/base/data/etc/android.hardware.touchscreen.multitouch.distinct.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml \
-    frameworks/base/data/etc/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/handheld_core_hardware.xml
+    frameworks/base/data/etc/android.hardware.touchscreen.multitouch.distinct.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml
+#    frameworks/base/data/etc/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml \
+#    frameworks/base/data/etc/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml \
 
 # Keylayout / Keychars
 PRODUCT_COPY_FILES += \
@@ -179,7 +180,7 @@ PRODUCT_POLICY := android.policy_phone
 PRODUCT_BUILD_PROP_OVERRIDES := BUILD_ID=FROYO BUILD_DISPLAY_ID=FROYO.EB01 PRODUCT_NAME=SCH-I500 TARGET_DEVICE=SCH-I500 PRODUCT_MODEL=SCH-I500 PRODUCT_BRAND=verizon BUILD_FINGERPRINT=verizon/SCH-I500/SCH-I500/SCH-I500:2.2.1/FROYO/EB01:user/release-keys PRIVATE_BUILD_DESC="SCH-I500-user 2.2.1 FROYO EB01 release-keys"
 
 PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=Vanilla_FroYo-v0.9.1
+        ro.modversion=Vanilla_FroYo-v0.9.3
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	dalvik.vm.execution-mode=int:jit
