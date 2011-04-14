@@ -30,6 +30,9 @@ BOARD_USES_FROYO := true
 BOARD_OVERLAY_FORMAT_YCbCr_420_SP := true
 BOARD_UMS_LUNFILE := "/sys/devices/platform/s3c-usbgadget/gadget/lun0/file"
 
+USE_OVERLAY_FORMAT_YCbCr_420_SP := TRUE
+#BUILD_PV_VIDEO_ENCODERS := 1
+
 # inherit from the proprietary version
 -include vendor/samsung/fascinate/BoardConfigVendor.mk
 
