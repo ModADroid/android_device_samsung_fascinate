@@ -40,7 +40,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/lib/libsec-ril40.so \
     rild.libargs=-d[SPACE]/dev/ttyS0 \
     wifi.interface=eth0 \
-    wifi.supplicant_scan_interval=120 \
+    wifi.supplicant_scan_interval=90 \
     ro.wifi.channels=11 \
     ro.opengles.version=131072
 
@@ -100,8 +100,8 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/fascinate/overlay
 
 # media profiles and capabilities spec
 PRODUCT_PROPERTY_OVERRIDES += \
-      media.a1026.nsForVoiceRec            = 0 \
-      media.a1026.enableA1026              = 1
+      media.a1026.nsForVoiceRec=0 \
+      media.a1026.enableA1026=1
 
 # media config xml file
 PRODUCT_COPY_FILES += \
@@ -132,6 +132,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/fascinate/prebuilt/etc/asound.conf:system/etc/asound.conf
 
+# "droid dream" malware protection file
+PRODUCT_COPY_FILES += \
+    device/samsung/fascinate/prebuilt/bin/profile:system/bin/profile
+
 # Install the features available on this device.
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -142,8 +146,6 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
     frameworks/base/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
     frameworks/base/data/etc/android.hardware.touchscreen.multitouch.distinct.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml
-#    frameworks/base/data/etc/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml \
-#    frameworks/base/data/etc/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml \
 
 # Keylayout / Keychars
 PRODUCT_COPY_FILES += \
@@ -180,7 +182,7 @@ PRODUCT_POLICY := android.policy_phone
 PRODUCT_BUILD_PROP_OVERRIDES := BUILD_ID=FROYO BUILD_DISPLAY_ID=FROYO.EB01 PRODUCT_NAME=SCH-I500 TARGET_DEVICE=SCH-I500 PRODUCT_MODEL=SCH-I500 PRODUCT_BRAND=verizon BUILD_FINGERPRINT=verizon/SCH-I500/SCH-I500/SCH-I500:2.2.1/FROYO/EB01:user/release-keys PRIVATE_BUILD_DESC="SCH-I500-user 2.2.1 FROYO EB01 release-keys"
 
 PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=Vanilla_FroYo-v0.9.3
+        ro.modversion=Vanilla_FroYo-v1.0
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	dalvik.vm.execution-mode=int:jit

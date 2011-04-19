@@ -31,7 +31,7 @@ BOARD_OVERLAY_FORMAT_YCbCr_420_SP := true
 BOARD_UMS_LUNFILE := "/sys/devices/platform/s3c-usbgadget/gadget/lun0/file"
 
 USE_OVERLAY_FORMAT_YCbCr_420_SP := TRUE
-#BUILD_PV_VIDEO_ENCODERS := 1
+BUILD_PV_VIDEO_ENCODERS := 1
 
 # inherit from the proprietary version
 -include vendor/samsung/fascinate/BoardConfigVendor.mk
@@ -70,8 +70,6 @@ BT_ALT_STACK := true
 BRCM_BTL_INCLUDE_A2DP := true
 BRCM_BT_USE_BTL_IF := true
 WITH_A2DP := true
-BRCM_BTL_INCLUDE_OBEX := true
-BRCM_BTL_OBEX_USE_DBUS := true
 
 BOARD_EGL_CFG := device/samsung/fascinate/prebuilt/lib/egl/egl.cfg
 

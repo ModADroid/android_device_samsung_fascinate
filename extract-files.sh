@@ -43,7 +43,6 @@ etc/wifi
 firmware
 lib/egl
 lib/hw
-lib/SCH-I500
 media
 tts/lang_pico
 xbin
@@ -196,8 +195,6 @@ tts/lang_pico/en-US_ta.bin
 tts/lang_pico/es-ES_zl0_sg.bin
 tts/lang_pico/es-ES_ta.bin
 
-xbin/ipctool
-
 bin/playlpm
 bin/charging_mode
 media/battery_charging_5.qmg
@@ -322,7 +319,6 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsec-ril40.so:system/lib/libsec-ril40.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsecril-client.so:system/lib/libsecril-client.so \\
     vendor/samsung/__DEVICE__/proprietary/etc/cdma-carriers-conf.xml:system/etc/cdma-carriers-conf.xml \\
-    vendor/samsung/__DEVICE__/proprietary/xbin/ipctool:system/xbin/ipctool \\
     vendor/samsung/__DEVICE__/proprietary/bin/dhcpcd:system/bin/dhcpcd \\
     vendor/samsung/__DEVICE__/proprietary/etc/dhcpcd/dhcpcd-hooks/01-test:system/etc/dhcpcd/dhcpcd-hooks/01-test \\
     vendor/samsung/__DEVICE__/proprietary/etc/dhcpcd/dhcpcd-hooks/20-dns.conf:system/etc/dhcpcd/dhcpcd-hooks/20-dns.conf \\
