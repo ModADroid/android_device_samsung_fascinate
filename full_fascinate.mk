@@ -149,16 +149,16 @@ PRODUCT_COPY_FILES += \
 
 # Keylayout / Keychars
 PRODUCT_COPY_FILES += \
-     device/samsung/fascinate/prebuilt/keylayout/s3c-keypad.kl:system/usr/keylayout/s3c-keypad.kl \
-     device/samsung/fascinate/prebuilt/keylayout/sec_jack.kl:system/usr/keylayout/sec_jack.kl \
-     device/samsung/fascinate/prebuilt/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
-     device/samsung/fascinate/prebuilt/keylayout/melfas-touchkey.kl:system/usr/keylayout/melfas-touchkey.kl \
-     device/samsung/fascinate/prebuilt/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
-     device/samsung/fascinate/prebuilt/keychars/s3c-keypad.kcm.bin:system/usr/keychars/s3c-keypad.kcm.bin \
-     device/samsung/fascinate/prebuilt/keychars/sec_jack.kcm.bin:system/usr/keychars/sec_jack.kcm.bin \
-     device/samsung/fascinate/prebuilt/keychars/melfas-touchkey.kcm.bin:system/usr/keychars/melfas-touchkey.kcm.bin \
-     device/samsung/fascinate/prebuilt/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
-     device/samsung/fascinate/prebuilt/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin  
+     device/samsung/fascinate/prebuilt/usr/keylayout/s3c-keypad.kl:system/usr/keylayout/s3c-keypad.kl \
+     device/samsung/fascinate/prebuilt/usr/keylayout/sec_jack.kl:system/usr/keylayout/sec_jack.kl \
+     device/samsung/fascinate/prebuilt/usr/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
+     device/samsung/fascinate/prebuilt/usr/keylayout/melfas-touchkey.kl:system/usr/keylayout/melfas-touchkey.kl \
+     device/samsung/fascinate/prebuilt/usr/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
+     device/samsung/fascinate/prebuilt/usr/keychars/s3c-keypad.kcm.bin:system/usr/keychars/s3c-keypad.kcm.bin \
+     device/samsung/fascinate/prebuilt/usr/keychars/sec_jack.kcm.bin:system/usr/keychars/sec_jack.kcm.bin \
+     device/samsung/fascinate/prebuilt/usr/keychars/melfas-touchkey.kcm.bin:system/usr/keychars/melfas-touchkey.kcm.bin \
+     device/samsung/fascinate/prebuilt/usr/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
+     device/samsung/fascinate/prebuilt/usr/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin  
 
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
