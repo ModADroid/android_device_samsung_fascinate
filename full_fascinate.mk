@@ -46,6 +46,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 #verizon cdma stuff
 PRODUCT_PROPERTY_OVERRIDES += \
+	ro.telephony.default_network=4 \
 	ro.com.android.wifi-watchlist=GoogleGuest \
 	ro.error.receiver.system.apps=com.google.android.feedback \
 	ro.setupwizard.enterprise_mode=1 \
@@ -73,6 +74,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	net.interfaces.defaultroute=cdma \
 	net.cdma.ppp.interface=ppp0 \
 	net.connectivity.type=CDMA1 \
+	net.interfaces.defaultroute=cdma \
 	ro.csc.sales_code=VZW \
 	ril.sales_code=VZW \
 	ro.carrier=Verizon
