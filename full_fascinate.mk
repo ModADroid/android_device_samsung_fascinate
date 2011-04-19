@@ -75,8 +75,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	net.connectivity.type=CDMA1 \
 	ro.csc.sales_code=VZW \
 	ril.sales_code=VZW \
-	ro.carrier=Verizon \
-	mobiledata.interfaces=eth0,ppp0
+	ro.carrier=Verizon
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
