@@ -21,6 +21,9 @@
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
 
+# inherit from the proprietary version
+-include vendor/samsung/fascinate/BoardConfigVendor.mk
+
 TARGET_IS_GALAXYS := true
 BOARD_USES_NEXUS_S_LIBS := true
 BOARD_USES_NEXUS_S_AUDIO := true
@@ -33,9 +36,6 @@ BOARD_UMS_LUNFILE := "/sys/devices/platform/s3c-usbgadget/gadget/lun0/file"
 USE_OVERLAY_FORMAT_YCbCr_420_SP := TRUE
 BUILD_PV_VIDEO_ENCODERS := 1
 
-# inherit from the proprietary version
--include vendor/samsung/fascinate/BoardConfigVendor.mk
-
 TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := SCH-I500
 
@@ -47,6 +47,10 @@ TARGET_BOARD_PLATFORM_GPU := POWERVR_SGX540_120
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_GLOBAL_CFLAGS += -mtune=cortex-a8
+TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a8
+ARCH_ARM_HAVE_TLS_REGISTER := true
+ANDROID_ARM_LINKER := true
 
 # WiFi related defines
 WIFI_FIRMWARE_LOADER := "wlservice"
