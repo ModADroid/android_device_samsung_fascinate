@@ -179,4 +179,7 @@
     <!-- The default iface on which to monitor data use -->
     <string name="config_datause_iface">ppp0</string>
 
+    <!-- Boolean indicating whether the TV animation should be used on screen on and off -->
+    <bool name="config_animateScreenLights">false</bool>
+
 </resources>
