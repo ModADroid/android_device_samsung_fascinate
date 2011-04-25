@@ -37,8 +37,6 @@ DIRS="
 app
 bin
 cameradata
-etc/dhcpcd/dhcpcd-hooks
-etc/ppp
 etc/wifi
 firmware
 lib/egl
@@ -46,7 +44,6 @@ lib/hw
 media
 seh
 tts/lang_pico
-xbin
 "
 
 for DIR in $DIRS; do
@@ -54,23 +51,12 @@ for DIR in $DIRS; do
 done
 
 FILES="
-bin/dhcpcd
 bin/immvibed
-bin/pppd
 bin/pppd_runner
-bin/rild
-bin/rilclient-test
-bin/vold
-bin/wlservice
-bin/wpa_supplicant
 bin/pvrsrvinit
 bin/sensorcalibutil_yamaha
 bin/sensorstatutil_yamaha
 bin/sensorserver_yamaha
-bin/pv2way_omx_engine_test
-bin/hciattach
-bin/btld
-bin/dbus-daemon
 bin/BCM4329B1_002.002.023.0417.0430.hcd
 bin/logwrapper
 bin/killmediaserver
@@ -85,51 +71,24 @@ seh/CE147F01.bin
 seh/CE147F02.bin
 seh/CE147F03.bin
 
-etc/asound.conf
-etc/ppp/chap-secrets
-etc/ppp/ip-down
-etc/ppp/ip-up
-etc/ppp/ip-up-vpn
-etc/ppp/options
-etc/ppp/pap-secrets
-etc/init.cdma-pppd
-etc/init.gprs-pppd
-etc/vold.conf
-etc/vold.fstab
 etc/wifi/nvram_net.txt
 etc/wifi/nvram_mfg.txt
 etc/wifi/bcm4329_aps.bin
 etc/wifi/bcm4329_mfg.bin
 etc/wifi/bcm4329_sta.bin
-etc/wifi/wifi.conf
-etc/wifi/wpa_supplicant.conf
-etc/apns-conf.xml
-etc/cdma-carriers-conf.xml
-etc/dhcpcd/dhcpcd-hooks/01-test
-etc/dhcpcd/dhcpcd-hooks/20-dns.conf
-etc/dhcpcd/dhcpcd-hooks/95-configured
-etc/dhcpcd/dhcpcd.conf
-etc/dhcpcd/dhcpcd-run-hooks
-etc/gps.conf
 
 lib/libgps.so
 lib/libsecgps.so
 lib/libril.so
 lib/libsec-ril40.so
-lib/libreference-ril.so
 lib/libsecril-client.so
-lib/libwlservice.so
-lib/libwpa_client.so
 
 lib/libarccamera.so
 lib/libcamerafirmwarejni.so
 lib/libcamera.so
 lib/libseccameraadaptor.so
 lib/libseccamera.so
-lib/libs3cjpeg.so
-lib/libskiagl.so
 
-lib/libhardware_legacy.so
 lib/libnetutils.so
 
 lib/libs263domxoc.so
@@ -277,8 +236,7 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/etc/wifi/nvram_mfg.txt:system/etc/wifi/nvram_mfg.txt \\
     vendor/samsung/__DEVICE__/proprietary/etc/wifi/bcm4329_aps.bin:system/etc/wifi/bcm4329_aps.bin \\
     vendor/samsung/__DEVICE__/proprietary/etc/wifi/bcm4329_mfg.bin:system/etc/wifi/bcm4329_mfg.bin \\
-    vendor/samsung/__DEVICE__/proprietary/etc/wifi/bcm4329_sta.bin:system/etc/wifi/bcm4329_sta.bin \\
-    vendor/samsung/__DEVICE__/proprietary/bin/wlservice:system/bin/wlservice
+    vendor/samsung/__DEVICE__/proprietary/etc/wifi/bcm4329_sta.bin:system/etc/wifi/bcm4329_sta.bin
 
 #
 # Display (3D)
