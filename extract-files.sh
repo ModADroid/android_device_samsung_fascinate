@@ -61,7 +61,6 @@ bin/BCM4329B1_002.002.023.0417.0430.hcd
 bin/logwrapper
 bin/killmediaserver
 bin/notified_event
-bin/mfgloader
 bin/netcfg
 
 cameradata/datapattern_420sp.yuv
@@ -371,7 +370,6 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/bin/logwrapper:system/bin/logwrapper \\
     vendor/samsung/__DEVICE__/proprietary/bin/killmediaserver:system/bin/killmediaserver \\
     vendor/samsung/__DEVICE__/proprietary/bin/notified_event:system/bin/notified_event \\
-    vendor/samsung/__DEVICE__/proprietary/bin/mfgloader:system/bin/mfgloader \\
     vendor/samsung/__DEVICE__/proprietary/bin/netcfg:system/bin/netcfg \\
     vendor/samsung/__DEVICE__/proprietary/lib/libnetutils.so:system/lib/libnetutils.so
 
