@@ -32,6 +32,8 @@ BOARD_USES_COPYBIT := true
 DEFAULT_FB_NUM := 0
 BOARD_OVERLAY_FORMAT_YCbCr_420_SP := true
 BOARD_UMS_LUNFILE := "/sys/devices/platform/s3c-usbgadget/gadget/lun0/file"
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/s3c-usbgadget/gadget/lun"
+BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 
 #BOARD_CAMERA_LIBRARIES := libcamera
 USE_CAMERA_STUB := true
