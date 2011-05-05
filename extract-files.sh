@@ -351,15 +351,6 @@ PRODUCT_COPY_FILES += \\
 #    vendor/samsung/__DEVICE__/proprietary/lib/libswmfdreg.so:system/lib/libswmfdreg.so
 
 #
-# Voice Search
-#
-PRODUCT_COPY_FILES += \\
-    vendor/samsung/__DEVICE__/proprietary/tts/lang_pico/en-US_lh0_sg.bin:system/tts/lang_pico/en-US_lh0_sg.bin \\
-    vendor/samsung/__DEVICE__/proprietary/tts/lang_pico/en-US_ta.bin:system/tts/lang_pico/en-US_ta.bin \\
-    vendor/samsung/__DEVICE__/proprietary/tts/lang_pico/es-ES_zl0_sg.bin:system/tts/lang_pico/es-ES_zl0_sg.bin \\
-    vendor/samsung/__DEVICE__/proprietary/tts/lang_pico/es-ES_ta.bin:system/tts/lang_pico/es-ES_ta.bin
-
-#
 # Other stuff
 #
 PRODUCT_COPY_FILES += \\
