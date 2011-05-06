@@ -51,8 +51,6 @@ for DIR in $DIRS; do
 done
 
 FILES="
-bin/immvibed
-bin/pppd_runner
 bin/pvrsrvinit
 bin/sensorcalibutil_yamaha
 bin/sensorstatutil_yamaha
@@ -60,7 +58,6 @@ bin/sensorserver_yamaha
 bin/BCM4329B1_002.002.023.0417.0430.hcd
 bin/logwrapper
 bin/killmediaserver
-bin/notified_event
 bin/netcfg
 
 cameradata/datapattern_420sp.yuv
@@ -155,9 +152,6 @@ lib/hw/copybit.s5pc110.so
 lib/hw/lights.s5pc110.so
 lib/hw/sensors.default.so
 lib/hw/gralloc.s5pc110.so
-
-lib/libImmVibeJ.so
-lib/libImmVibe.so
 
 tts/lang_pico/en-US_lh0_sg.bin
 tts/lang_pico/en-US_ta.bin
@@ -295,12 +289,6 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libril.so:system/lib/libril.so
 
 #
-# PPP
-#
-PRODUCT_COPY_FILES += \\
-    vendor/samsung/__DEVICE__/proprietary/bin/pppd_runner:system/bin/pppd_runner
-
-#
 # OMX
 #
 PRODUCT_COPY_FILES += \\
@@ -354,13 +342,9 @@ PRODUCT_COPY_FILES += \\
 # Other stuff
 #
 PRODUCT_COPY_FILES += \\
-    vendor/samsung/__DEVICE__/proprietary/bin/immvibed:system/bin/immvibed \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libImmVibeJ.so:system/lib/libImmVibeJ.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libImmVibe.so:system/lib/libImmVibe.so \\
     vendor/samsung/__DEVICE__/proprietary/bin/BCM4329B1_002.002.023.0417.0430.hcd:system/bin/BCM4329B1_002.002.023.0417.0430.hcd \\
     vendor/samsung/__DEVICE__/proprietary/bin/logwrapper:system/bin/logwrapper \\
     vendor/samsung/__DEVICE__/proprietary/bin/killmediaserver:system/bin/killmediaserver \\
-    vendor/samsung/__DEVICE__/proprietary/bin/notified_event:system/bin/notified_event \\
     vendor/samsung/__DEVICE__/proprietary/bin/netcfg:system/bin/netcfg \\
     vendor/samsung/__DEVICE__/proprietary/lib/libnetutils.so:system/lib/libnetutils.so
 
