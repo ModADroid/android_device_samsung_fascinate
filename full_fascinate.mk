@@ -70,6 +70,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.cdma.otaspnumschema=SELC,1,80,99 \
 	ro.telephony.call_ring.multiple=false \
 	ro.telephony.call_ring.delay=3000 \
+	ro.telephony.call_ring.absent=true \
   	net.cdma.pppd.authtype=require-chap \
 	net.cdma.pppd.user=user[SPACE]VerizonWireless \
 	net.cdma.datalinkinterface=/dev/ttyCDMA0 \
