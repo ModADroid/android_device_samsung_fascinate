@@ -57,7 +57,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.com.google.clientidbase.vs=android-verizon \
 	ro.com.google.clientidbase.gmm=android-verizon \
 	ro.com.google.locationfeatures=1 \
-	ro.ril.def.agps.mode = 2 \
+	ro.ril.def.agps.mode=2 \
 	ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
 	ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
 	ro.cdma.home.operator.numeric=310004 \
@@ -71,7 +71,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.telephony.call_ring.multiple=false \
 	ro.telephony.call_ring.delay=3000 \
 	ro.telephony.call_ring.absent=true \
-  	net.cdma.pppd.authtype=require-chap \
+	net.cdma.pppd.authtype=require-chap \
 	net.cdma.pppd.user=user[SPACE]VerizonWireless \
 	net.cdma.datalinkinterface=/dev/ttyCDMA0 \
 	net.interfaces.defaultroute=cdma \
@@ -152,6 +152,31 @@ PRODUCT_COPY_FILES += \
      device/samsung/fascinate/prebuilt/usr/keychars/melfas-touchkey.kcm.bin:system/usr/keychars/melfas-touchkey.kcm.bin \
      device/samsung/fascinate/prebuilt/usr/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
      device/samsung/fascinate/prebuilt/usr/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin  
+
+# These are the OpenMAX IL configuration files
+PRODUCT_COPY_FILES += \
+    device/samsung/common/sec_mm/sec_omx/sec_omx_core/secomxregistry:system/etc/secomxregistry
+
+# These are the OpenMAX IL modules
+PRODUCT_PACKAGES += \
+    libSEC_OMX_Core \
+    libOMX.SEC.AVC.Decoder \
+    libOMX.SEC.M4V.Decoder \
+    libOMX.SEC.M4V.Encoder \
+    libOMX.SEC.AVC.Encoder
+
+# Libs
+PRODUCT_PACKAGES += \
+    libaudio \
+    libaudiopolicy \
+    sec_mm \
+    libstagefrighthw \
+    copybit.s5pc110 \
+    libs3cjpeg \
+    lights.s5pc110 \
+    overlay.s5pc110 \
+    libcamera \
+    gps.aries
 
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
