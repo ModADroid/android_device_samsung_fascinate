@@ -169,11 +169,37 @@ PRODUCT_PACKAGES += \
     sec_mm \
     libstagefrighthw \
     copybit.s5pc110 \
-    libs3cjpeg \
     lights.s5pc110 \
     overlay.s5pc110 \
-    libcamera \
     gps.aries
+#    libs3cjpeg \
+#    libcamera \
+
+# camera stuff from i9000 GB
+PRODUCT_COPY_FILES += \
+     device/samsung/fascinate/prebuilt/bin/tvoutserver:system/bin/tvoutserver \
+     device/samsung/fascinate/prebuilt/cameradata/datapattern_420sp.yuv:system/cameradata/datapattern_420sp.yuv \
+     device/samsung/fascinate/prebuilt/cameradata/datapattern_front_420sp.yuv:system/cameradata/datapattern_front_420sp.yuv \
+     device/samsung/fascinate/prebuilt/lib/libcamera.so:obj/lib/libcamera.so \
+     device/samsung/fascinate/prebuilt/lib/libcamera.so:system/lib/libcamera.so \
+     device/samsung/fascinate/prebuilt/lib/libcamera_client.so:system/lib/libcamera.so \
+     device/samsung/fascinate/prebuilt/lib/libActionShot.so:system/lib/libActionShot.so \
+     device/samsung/fascinate/prebuilt/lib/libCaMotion.so:system/lib/libCaMotion.so \
+     device/samsung/fascinate/prebuilt/lib/libcaps.so:system/lib/libcaps.so \
+     device/samsung/fascinate/prebuilt/lib/libPanoraMax1.so:system/lib/libPanoraMax1.so \
+     device/samsung/fascinate/prebuilt/lib/libPlusMe.so:system/lib/libPlusMe.so \
+     device/samsung/fascinate/prebuilt/lib/libarccamera.so:system/lib/libarccamera.so \
+     device/samsung/fascinate/prebuilt/lib/libcamerafirmwarejni.so:system/lib/libcamerafirmwarejni.so \
+     device/samsung/fascinate/prebuilt/lib/libcameraservice.so:system/lib/libcameraservice.so \
+     device/samsung/fascinate/prebuilt/lib/libseccamera.so:system/lib/libseccamera.so \
+     device/samsung/fascinate/prebuilt/lib/libseccameraadaptor.so:system/lib/libseccameraadaptor.so \
+     device/samsung/fascinate/prebuilt/lib/libs3cjpeg.so:system/lib/libs3cjpeg.so \
+     device/samsung/fascinate/prebuilt/lib/libtvout.so:system/lib/libtvout.so \
+     device/samsung/fascinate/prebuilt/lib/libtvoutservice.so:system/lib/libtvoutservice.so \
+     device/samsung/fascinate/prebuilt/lib/lib_tvoutengine.so:system/lib/lib_tvoutengine.so \
+     device/samsung/fascinate/prebuilt/lib/libtvoutfimc.so:system/lib/libtvoutfimc.so \
+     device/samsung/fascinate/prebuilt/lib/libtvouthdmi.so:system/lib/libtvouthdmi.so \
+     device/samsung/fascinate/prebuilt/lib/libsecjpegencoder.so:system/lib/libsecjpegencoder.so
 
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
