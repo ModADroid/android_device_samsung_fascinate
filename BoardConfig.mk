@@ -29,16 +29,15 @@ BOARD_USES_NEXUS_S_LIBS := true
 BOARD_USES_NEXUS_S_AUDIO := true
 BOARD_USES_OVERLAY := true
 BOARD_USES_COPYBIT := true
-DEFAULT_FB_NUM := 0
-#BOARD_OVERLAY_FORMAT_YCbCr_420_SP := true
 BOARD_UMS_LUNFILE := "/sys/devices/platform/s3c-usbgadget/gadget/lun0/file"
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/s3c-usbgadget/gadget/lun"
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_USES_BML_OVER_MTD := true
 
-BOARD_CAMERA_LIBRARIES := libcamera
-#USE_CAMERA_STUB := true
+DEFAULT_FB_NUM := 0
 BUILD_PV_VIDEO_ENCODERS := 1
+BOARD_V4L2_DEVICE := /dev/video1
+BOARD_CAMERA_DEVICE := /dev/video0
 
 TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := aries
@@ -51,8 +50,8 @@ TARGET_BOARD_PLATFORM_GPU := POWERVR_SGX540_120
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_GLOBAL_CFLAGS += -mtune=cortex-a8
-TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a8
+TARGET_GLOBAL_CFLAGS += -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp
 ARCH_ARM_HAVE_TLS_REGISTER := true
 ANDROID_ARM_LINKER := true
 
